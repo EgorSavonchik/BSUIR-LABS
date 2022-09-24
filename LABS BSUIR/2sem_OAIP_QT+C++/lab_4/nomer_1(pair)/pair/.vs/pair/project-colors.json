@@ -1,0 +1,66 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "71e125cb-1342-47fa-a848-51be93eb1584": {
+      "ProjectGuid": "71e125cb-1342-47fa-a848-51be93eb1584",
+      "DisplayName": "pair",
+      "ColorIndex": 0
+    },
+    "869862c7-0dc9-4a35-9077-4a8bc1f884a5": {
+      "ProjectGuid": "869862c7-0dc9-4a35-9077-4a8bc1f884a5",
+      "DisplayName": "string",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Прочие файлы",
+      "ColorIndex": -1
+    },
+    "34240a20-28dd-4a00-b056-77c1af297b2d": {
+      "ProjectGuid": "34240a20-28dd-4a00-b056-77c1af297b2d",
+      "DisplayName": "vector",
+      "ColorIndex": 2
+    },
+    "340552c4-1ea4-4f8c-bf08-13e968410ee6": {
+      "ProjectGuid": "340552c4-1ea4-4f8c-bf08-13e968410ee6",
+      "DisplayName": "bindec(pizdec)",
+      "ColorIndex": 3
+    },
+    "696f7065-4620-4c0c-96e4-775685b4293d": {
+      "ProjectGuid": "696f7065-4620-4c0c-96e4-775685b4293d",
+      "DisplayName": "parser_gy",
+      "ColorIndex": 4
+    },
+    "b6e55f19-ef1b-4d08-a672-3cd8b5cba8cc": {
+      "ProjectGuid": "b6e55f19-ef1b-4d08-a672-3cd8b5cba8cc",
+      "DisplayName": "StaticLib1",
+      "ColorIndex": 5
+    },
+    "986eff84-b419-4eb8-92a0-e430fc0aecb7": {
+      "ProjectGuid": "986eff84-b419-4eb8-92a0-e430fc0aecb7",
+      "DisplayName": "dynamicStr",
+      "ColorIndex": 6
+    },
+    "ad481f28-e1df-40cd-ba4d-a31fe8ae704c": {
+      "ProjectGuid": "ad481f28-e1df-40cd-ba4d-a31fe8ae704c",
+      "DisplayName": "huest",
+      "ColorIndex": 7
+    },
+    "09054627-d22b-4ac9-96cd-b09c840f72c0": {
+      "ProjectGuid": "09054627-d22b-4ac9-96cd-b09c840f72c0",
+      "DisplayName": "staticVector",
+      "ColorIndex": 8
+    },
+    "db80246f-6b36-420c-9f7e-c3ac850985a0": {
+      "ProjectGuid": "db80246f-6b36-420c-9f7e-c3ac850985a0",
+      "DisplayName": "vectorLib",
+      "ColorIndex": 9
+    },
+    "c2995cd5-6e6f-49a7-87cb-cd8d699272c7": {
+      "ProjectGuid": "c2995cd5-6e6f-49a7-87cb-cd8d699272c7",
+      "DisplayName": "test",
+      "ColorIndex": 10
+    }
+  },
+  "NextColorIndex": 11
+}

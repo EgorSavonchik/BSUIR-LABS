@@ -1,0 +1,5 @@
+Belarus team2 QWER qww w 1 15 50 50
+Belarus team2 QWERT qwww w 5 20 70 50
+Belarus team3 QWERTY qwwww w 13 20 50 100
+Belarus team1 Egor q w 133 20 50 50
+Belarus team1 QWE q w 356 10 50 50

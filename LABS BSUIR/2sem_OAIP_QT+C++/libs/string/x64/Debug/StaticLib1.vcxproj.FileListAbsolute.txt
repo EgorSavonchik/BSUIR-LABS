@@ -1,0 +1,1 @@
+C:\Users\HP\Desktop\labs\OAIP_C++_QT\libs\string\x64\Debug\StaticLib1.lib

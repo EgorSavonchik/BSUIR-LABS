@@ -1,0 +1,3 @@
+﻿  nomer_3(weak_ptr).cpp
+C:\Users\HP\Desktop\labs\OAIP_C++_QT\lab_2\nomer_3(weak_ptr)\nomer_3(weak_ptr).cpp(58,17): warning C4834: отмена возвращаемого значения функции с атрибутом "nodiscard"
+  nomer_3(weak_ptr).vcxproj -> C:\Users\HP\Desktop\labs\OAIP_C++_QT\lab_2\nomer_2(shared)\x64\Debug\nomer_3(weak_ptr).exe

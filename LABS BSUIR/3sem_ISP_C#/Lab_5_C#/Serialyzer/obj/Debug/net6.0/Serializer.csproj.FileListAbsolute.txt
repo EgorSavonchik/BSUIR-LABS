@@ -1,0 +1,15 @@
+C:\Users\HP\Desktop\labs\lab_3sem_C#\Serialyzer\obj\Debug\net6.0\Serializer.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\labs\lab_3sem_C#\Serialyzer\obj\Debug\net6.0\Serializer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\labs\lab_3sem_C#\Serialyzer\obj\Debug\net6.0\Serializer.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\labs\lab_3sem_C#\Serialyzer\obj\Debug\net6.0\Serializer.AssemblyInfo.cs
+C:\Users\HP\Desktop\labs\lab_3sem_C#\Serialyzer\obj\Debug\net6.0\Serializer.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\labs\lab_3sem_C#\Serialyzer\bin\Debug\net6.0\Serializer.deps.json
+C:\Users\HP\Desktop\labs\lab_3sem_C#\Serialyzer\bin\Debug\net6.0\Serializer.dll
+C:\Users\HP\Desktop\labs\lab_3sem_C#\Serialyzer\bin\Debug\net6.0\ref\Serializer.dll
+C:\Users\HP\Desktop\labs\lab_3sem_C#\Serialyzer\bin\Debug\net6.0\Serializer.pdb
+C:\Users\HP\Desktop\labs\lab_3sem_C#\Serialyzer\bin\Debug\net6.0\Lab_5.Domain.dll
+C:\Users\HP\Desktop\labs\lab_3sem_C#\Serialyzer\bin\Debug\net6.0\Lab_5.Domain.pdb
+C:\Users\HP\Desktop\labs\lab_3sem_C#\Serialyzer\obj\Debug\net6.0\Serializer.csproj.CopyComplete
+C:\Users\HP\Desktop\labs\lab_3sem_C#\Serialyzer\obj\Debug\net6.0\Serializer.dll
+C:\Users\HP\Desktop\labs\lab_3sem_C#\Serialyzer\obj\Debug\net6.0\ref\Serializer.dll
+C:\Users\HP\Desktop\labs\lab_3sem_C#\Serialyzer\obj\Debug\net6.0\Serializer.pdb

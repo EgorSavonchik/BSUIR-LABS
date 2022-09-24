@@ -1,0 +1,33 @@
+  ADDR B1 B2 B3 B4 C:\Users\HP\Desktop\labs\lab_3sem_Asm\Lab_3\Lab_ PAGE       1
+
+                    org $8000
+
+  8000 86 80        ldaa #$80
+  8002 97 10        staa $0010
+
+  8004 86 02        ldaa #$02
+  8006 97 11        staa $0011
+  8008 97 12        staa $0012
+
+  800A 96 10        ldaa $0010
+  800C 44           lsra
+  800D 44           lsra
+  800E 44           lsra
+  800F 44           lsra
+  8010 44           lsra
+  8011 44           lsra
+  8012 44           lsra
+
+  8013 D6 10        ldab $0010
+  8015 D7 0F        stab $000f
+  8017 D6 11        ldab $0011
+  8019 D7 10        stab $0010
+  801B D6 12        ldab $0012
+  801D D7 11        stab $0011
+
+  801F 15 11 01     bclr $0011 #$01
+
+  8022 9A 11        oraa $0011
+  8024 97 11        staa $0011
+
+  8026 7E 80 00     jmp $8000

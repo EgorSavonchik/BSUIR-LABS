@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "3e83c0e8-350c-468a-923f-7fe410c1af74": {
+      "ProjectGuid": "3e83c0e8-350c-468a-923f-7fe410c1af74",
+      "DisplayName": "smart_ptr",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

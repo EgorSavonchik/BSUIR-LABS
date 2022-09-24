@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "08d0f377-d6ad-4884-a6c7-b3724a6f43ff": {
+      "ProjectGuid": "08d0f377-d6ad-4884-a6c7-b3724a6f43ff",
+      "DisplayName": "deque",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

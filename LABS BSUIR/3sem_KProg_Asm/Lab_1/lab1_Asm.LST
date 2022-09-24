@@ -1,0 +1,12 @@
+  ADDR B1 B2 B3 B4 C:\Users\HP\Desktop\labs\lab_3sem_Asm\Lab_1\     PAGE       1
+
+                    org $8000
+
+  8000 B7 81 00     staa $8100
+  8003 F7 81 01     stab $8101
+  8006 FD 81 02     std $8102
+  8009 FF 81 04     stx $8104
+  800C 18 FF 81 06  sty $8106
+  8010 07           tpa
+  8011 B7 81 08     staa $8108
+  8014 7E 80 00     jmp $8000

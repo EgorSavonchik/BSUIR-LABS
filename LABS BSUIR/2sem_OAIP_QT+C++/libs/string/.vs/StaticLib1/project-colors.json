@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "b6e55f19-ef1b-4d08-a672-3cd8b5cba8cc": {
+      "ProjectGuid": "b6e55f19-ef1b-4d08-a672-3cd8b5cba8cc",
+      "DisplayName": "StaticLib1",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

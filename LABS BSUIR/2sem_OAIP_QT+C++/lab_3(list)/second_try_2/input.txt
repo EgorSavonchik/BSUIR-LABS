@@ -1,0 +1,11 @@
+void MainWindow::on_checkButton_clicked()
+{
+    if(zadacha(gerArr(ui->plainTextEdit->toPlainText().split('\n'))))
+    {
+        QMessageBox::information(this, "result", "Yes");
+    }
+    else
+    {
+        QMessageBox::information(this, "result", "no, mistake in "  + QString::number((*posPow)[0] + 1) + " row and " + QString::number((*posST)[0] + 1) + " index");
+    }
+}

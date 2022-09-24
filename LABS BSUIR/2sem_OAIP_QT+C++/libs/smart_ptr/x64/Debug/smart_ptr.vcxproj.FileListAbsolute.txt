@@ -1,0 +1,1 @@
+C:\Users\HP\Desktop\labs\OAIP_C++_QT\libs\smart_ptr\x64\Debug\smart_ptr.lib

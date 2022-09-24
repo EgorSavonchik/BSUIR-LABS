@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "uFDa06l93dTgxcP0N46NoODMWXzqgFkVFXYULlDKA/XJKQy3cTAuu3RBDXpHOu1ccY0yNBFi028Q1lMgjYG6YA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\HP\\Desktop\\labs\\labs_C#_2sem\\lab_1\\_153501_Savonchik\\_153501_Savonchik.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

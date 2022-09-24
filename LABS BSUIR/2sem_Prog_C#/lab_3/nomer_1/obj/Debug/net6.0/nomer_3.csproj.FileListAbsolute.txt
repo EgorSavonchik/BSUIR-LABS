@@ -1,0 +1,14 @@
+C:\Users\HP\Desktop\labs\labs_C#_2sem\nomer_3\bin\Debug\net6.0\nomer_3.exe
+C:\Users\HP\Desktop\labs\labs_C#_2sem\nomer_3\bin\Debug\net6.0\nomer_3.deps.json
+C:\Users\HP\Desktop\labs\labs_C#_2sem\nomer_3\bin\Debug\net6.0\nomer_3.runtimeconfig.json
+C:\Users\HP\Desktop\labs\labs_C#_2sem\nomer_3\bin\Debug\net6.0\nomer_3.dll
+C:\Users\HP\Desktop\labs\labs_C#_2sem\nomer_3\bin\Debug\net6.0\ref\nomer_3.dll
+C:\Users\HP\Desktop\labs\labs_C#_2sem\nomer_3\bin\Debug\net6.0\nomer_3.pdb
+C:\Users\HP\Desktop\labs\labs_C#_2sem\nomer_3\obj\Debug\net6.0\nomer_3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\labs\labs_C#_2sem\nomer_3\obj\Debug\net6.0\nomer_3.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\labs\labs_C#_2sem\nomer_3\obj\Debug\net6.0\nomer_3.AssemblyInfo.cs
+C:\Users\HP\Desktop\labs\labs_C#_2sem\nomer_3\obj\Debug\net6.0\nomer_3.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\labs\labs_C#_2sem\nomer_3\obj\Debug\net6.0\nomer_3.dll
+C:\Users\HP\Desktop\labs\labs_C#_2sem\nomer_3\obj\Debug\net6.0\ref\nomer_3.dll
+C:\Users\HP\Desktop\labs\labs_C#_2sem\nomer_3\obj\Debug\net6.0\nomer_3.pdb
+C:\Users\HP\Desktop\labs\labs_C#_2sem\nomer_3\obj\Debug\net6.0\nomer_3.genruntimeconfig.cache

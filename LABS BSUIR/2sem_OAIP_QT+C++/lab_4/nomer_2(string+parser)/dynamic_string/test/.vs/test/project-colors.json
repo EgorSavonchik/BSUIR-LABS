@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "ad481f28-e1df-40cd-ba4d-a31fe8ae704c": {
+      "ProjectGuid": "ad481f28-e1df-40cd-ba4d-a31fe8ae704c",
+      "DisplayName": "huest",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Прочие файлы",
+      "ColorIndex": -1
+    },
+    "c2995cd5-6e6f-49a7-87cb-cd8d699272c7": {
+      "ProjectGuid": "c2995cd5-6e6f-49a7-87cb-cd8d699272c7",
+      "DisplayName": "test",
+      "ColorIndex": 1
+    },
+    "986eff84-b419-4eb8-92a0-e430fc0aecb7": {
+      "ProjectGuid": "986eff84-b419-4eb8-92a0-e430fc0aecb7",
+      "DisplayName": "dynamicStr",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

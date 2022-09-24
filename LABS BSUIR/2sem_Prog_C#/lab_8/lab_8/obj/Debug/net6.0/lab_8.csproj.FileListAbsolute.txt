@@ -1,0 +1,15 @@
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_8\lab_8\bin\Debug\net6.0\lab_8.exe
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_8\lab_8\bin\Debug\net6.0\lab_8.deps.json
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_8\lab_8\bin\Debug\net6.0\lab_8.runtimeconfig.json
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_8\lab_8\bin\Debug\net6.0\lab_8.dll
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_8\lab_8\bin\Debug\net6.0\ref\lab_8.dll
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_8\lab_8\bin\Debug\net6.0\lab_8.pdb
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_8\lab_8\obj\Debug\net6.0\lab_8.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_8\lab_8\obj\Debug\net6.0\lab_8.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_8\lab_8\obj\Debug\net6.0\lab_8.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_8\lab_8\obj\Debug\net6.0\lab_8.AssemblyInfo.cs
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_8\lab_8\obj\Debug\net6.0\lab_8.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_8\lab_8\obj\Debug\net6.0\lab_8.dll
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_8\lab_8\obj\Debug\net6.0\ref\lab_8.dll
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_8\lab_8\obj\Debug\net6.0\lab_8.pdb
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_8\lab_8\obj\Debug\net6.0\lab_8.genruntimeconfig.cache

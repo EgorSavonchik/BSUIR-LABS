@@ -1,0 +1,15 @@
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_7\lab_7\bin\Debug\net6.0\lab_7.exe
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_7\lab_7\bin\Debug\net6.0\lab_7.deps.json
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_7\lab_7\bin\Debug\net6.0\lab_7.runtimeconfig.json
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_7\lab_7\bin\Debug\net6.0\lab_7.dll
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_7\lab_7\bin\Debug\net6.0\ref\lab_7.dll
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_7\lab_7\bin\Debug\net6.0\lab_7.pdb
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_7\lab_7\obj\Debug\net6.0\lab_7.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_7\lab_7\obj\Debug\net6.0\lab_7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_7\lab_7\obj\Debug\net6.0\lab_7.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_7\lab_7\obj\Debug\net6.0\lab_7.AssemblyInfo.cs
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_7\lab_7\obj\Debug\net6.0\lab_7.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_7\lab_7\obj\Debug\net6.0\lab_7.dll
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_7\lab_7\obj\Debug\net6.0\ref\lab_7.dll
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_7\lab_7\obj\Debug\net6.0\lab_7.pdb
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_7\lab_7\obj\Debug\net6.0\lab_7.genruntimeconfig.cache

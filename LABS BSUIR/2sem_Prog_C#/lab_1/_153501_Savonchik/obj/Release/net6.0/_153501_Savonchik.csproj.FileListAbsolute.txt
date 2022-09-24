@@ -1,0 +1,17 @@
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_1\_153501_Savonchik\bin\Release\net6.0\_153501_Savonchik.exe
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_1\_153501_Savonchik\bin\Release\net6.0\_153501_Savonchik.deps.json
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_1\_153501_Savonchik\bin\Release\net6.0\_153501_Savonchik.runtimeconfig.json
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_1\_153501_Savonchik\bin\Release\net6.0\_153501_Savonchik.dll
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_1\_153501_Savonchik\bin\Release\net6.0\ref\_153501_Savonchik.dll
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_1\_153501_Savonchik\bin\Release\net6.0\_153501_Savonchik.pdb
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_1\_153501_Savonchik\bin\Release\net6.0\AutoMapper.dll
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_1\_153501_Savonchik\obj\Release\net6.0\_153501_Savonchik.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_1\_153501_Savonchik\obj\Release\net6.0\_153501_Savonchik.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_1\_153501_Savonchik\obj\Release\net6.0\_153501_Savonchik.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_1\_153501_Savonchik\obj\Release\net6.0\_153501_Savonchik.AssemblyInfo.cs
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_1\_153501_Savonchik\obj\Release\net6.0\_153501_Savonchik.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_1\_153501_Savonchik\obj\Release\net6.0\_153501_Savonchik.csproj.CopyComplete
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_1\_153501_Savonchik\obj\Release\net6.0\_153501_Savonchik.dll
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_1\_153501_Savonchik\obj\Release\net6.0\ref\_153501_Savonchik.dll
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_1\_153501_Savonchik\obj\Release\net6.0\_153501_Savonchik.pdb
+C:\Users\HP\Desktop\labs\labs_C#_2sem\lab_1\_153501_Savonchik\obj\Release\net6.0\_153501_Savonchik.genruntimeconfig.cache

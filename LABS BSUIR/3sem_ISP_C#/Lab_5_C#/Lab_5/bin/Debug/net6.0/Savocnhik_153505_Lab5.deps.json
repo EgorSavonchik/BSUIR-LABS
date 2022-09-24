@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Savocnhik_153505_Lab5/1.0.0": {
+        "dependencies": {
+          "Lab_5.Domain": "1.0.0",
+          "Serializer": "1.0.0"
+        },
+        "runtime": {
+          "Savocnhik_153505_Lab5.dll": {}
+        }
+      },
+      "Lab_5.Domain/1.0.0": {
+        "runtime": {
+          "Lab_5.Domain.dll": {}
+        }
+      },
+      "Serializer/1.0.0": {
+        "dependencies": {
+          "Lab_5.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Serializer.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Savocnhik_153505_Lab5/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Lab_5.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Serializer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

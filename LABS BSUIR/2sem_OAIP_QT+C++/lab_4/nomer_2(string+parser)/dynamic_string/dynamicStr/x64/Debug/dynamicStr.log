@@ -1,0 +1,19 @@
+﻿  pch.cpp
+C:\Users\HP\Desktop\labs\OAIP_C++_QT\lab_4\nomer_2(string+parser)\dynamic_string\dynamicStr\framework.h(21,7): warning C4273: strncpy: несовместимое связывание dll
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\string.h(334,1): message : см. предыдущее определение "strncpy"
+C:\Users\HP\Desktop\labs\OAIP_C++_QT\lab_4\nomer_2(string+parser)\dynamic_string\dynamicStr\framework.h(25,7): warning C4273: strncat: несовместимое связывание dll
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\string.h(262,1): message : см. предыдущее определение "strncat"
+C:\Users\HP\Desktop\labs\OAIP_C++_QT\lab_4\nomer_2(string+parser)\dynamic_string\dynamicStr\framework.h(33,5): warning C4273: strncmp: несовместимое связывание dll
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\string.h(271,22): message : см. предыдущее определение "strncmp"
+C:\Users\HP\Desktop\labs\OAIP_C++_QT\lab_4\nomer_2(string+parser)\dynamic_string\dynamicStr\framework.h(35,8): warning C4273: strxfrm: несовместимое связывание dll
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\string.h(479,25): message : см. предыдущее определение "strxfrm"
+  dllmain.cpp
+C:\Users\HP\Desktop\labs\OAIP_C++_QT\lab_4\nomer_2(string+parser)\dynamic_string\dynamicStr\dllmain.cpp(452,9): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\HP\Desktop\labs\OAIP_C++_QT\lab_4\nomer_2(string+parser)\dynamic_string\dynamicStr\dllmain.cpp(548,19): warning C4244: инициализация: преобразование "double" в "size_t", возможна потеря данных
+C:\Users\HP\Desktop\labs\OAIP_C++_QT\lab_4\nomer_2(string+parser)\dynamic_string\dynamicStr\dllmain.cpp(552,19): warning C4244: *=: преобразование "double" в "size_t", возможна потеря данных
+C:\Users\HP\Desktop\labs\OAIP_C++_QT\lab_4\nomer_2(string+parser)\dynamic_string\dynamicStr\dllmain.cpp(611,31): warning C4244: аргумент: преобразование "double" в "size_t", возможна потеря данных
+C:\Users\HP\Desktop\labs\OAIP_C++_QT\lab_4\nomer_2(string+parser)\dynamic_string\dynamicStr\dllmain.cpp(628,53): warning C4244: аргумент: преобразование "double" в "size_t", возможна потеря данных
+C:\Users\HP\Desktop\labs\OAIP_C++_QT\lab_4\nomer_2(string+parser)\dynamic_string\dynamicStr\dllmain.cpp(642,39): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+  LINK : не найден или не выполнена сборка C:\Users\HP\Desktop\labs\OAIP_C++_QT\lab_4\nomer_2(string+parser)\dynamic_string\test\x64\Debug\dynamicStr.dll при последней инкрементной компоновке; выполняется полная компоновка
+     Создается библиотека C:\Users\HP\Desktop\labs\OAIP_C++_QT\lab_4\nomer_2(string+parser)\dynamic_string\test\x64\Debug\dynamicStr.lib и объект C:\Users\HP\Desktop\labs\OAIP_C++_QT\lab_4\nomer_2(string+parser)\dynamic_string\test\x64\Debug\dynamicStr.exp
+  dynamicStr.vcxproj -> C:\Users\HP\Desktop\labs\OAIP_C++_QT\lab_4\nomer_2(string+parser)\dynamic_string\test\x64\Debug\dynamicStr.dll
