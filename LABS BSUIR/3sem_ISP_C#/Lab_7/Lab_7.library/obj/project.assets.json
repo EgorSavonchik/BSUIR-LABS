@@ -1,30 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
-      "Lab_7.library/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/Lab_7.library.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Lab_7.library.dll": {}
-        }
-      }
-    }
+    "net6.0": {}
   },
-  "libraries": {
-    "Lab_7.library/1.0.0": {
-      "type": "project",
-      "path": "../Lab_7.library/Lab_7.library.csproj",
-      "msbuildProject": "../Lab_7.library/Lab_7.library.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net6.0": [
-      "Lab_7.library >= 1.0.0"
-    ]
+    "net6.0": []
   },
   "packageFolders": {
     "C:\\Users\\HP\\.nuget\\packages\\": {}
@@ -32,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Desktop\\labs\\LABS BSUIR\\3sem_ISP_C#\\Lab_7\\Lab_7\\Lab_7.csproj",
-      "projectName": "Lab_7",
-      "projectPath": "C:\\Users\\HP\\Desktop\\labs\\LABS BSUIR\\3sem_ISP_C#\\Lab_7\\Lab_7\\Lab_7.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Desktop\\labs\\LABS BSUIR\\3sem_ISP_C#\\Lab_7\\Lab_7.library\\Lab_7.library.csproj",
+      "projectName": "Lab_7.library",
+      "projectPath": "C:\\Users\\HP\\Desktop\\labs\\LABS BSUIR\\3sem_ISP_C#\\Lab_7\\Lab_7.library\\Lab_7.library.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Desktop\\labs\\LABS BSUIR\\3sem_ISP_C#\\Lab_7\\Lab_7\\obj\\",
+      "outputPath": "C:\\Users\\HP\\Desktop\\labs\\LABS BSUIR\\3sem_ISP_C#\\Lab_7\\Lab_7.library\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -52,11 +33,7 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {
-            "C:\\Users\\HP\\Desktop\\labs\\LABS BSUIR\\3sem_ISP_C#\\Lab_7\\Lab_7.library\\Lab_7.library.csproj": {
-              "projectPath": "C:\\Users\\HP\\Desktop\\labs\\LABS BSUIR\\3sem_ISP_C#\\Lab_7\\Lab_7.library\\Lab_7.library.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

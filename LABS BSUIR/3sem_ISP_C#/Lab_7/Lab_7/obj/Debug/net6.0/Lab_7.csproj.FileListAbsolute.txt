@@ -13,3 +13,21 @@ C:\Users\HP\Desktop\labs\lab_3sem_C#\Lab_7\Lab_7\obj\Debug\net6.0\Lab_7.dll
 C:\Users\HP\Desktop\labs\lab_3sem_C#\Lab_7\Lab_7\obj\Debug\net6.0\ref\Lab_7.dll
 C:\Users\HP\Desktop\labs\lab_3sem_C#\Lab_7\Lab_7\obj\Debug\net6.0\Lab_7.pdb
 C:\Users\HP\Desktop\labs\lab_3sem_C#\Lab_7\Lab_7\obj\Debug\net6.0\Lab_7.genruntimeconfig.cache
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_7\Lab_7\bin\Debug\net6.0\Lab_7.exe
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_7\Lab_7\bin\Debug\net6.0\Lab_7.deps.json
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_7\Lab_7\bin\Debug\net6.0\Lab_7.runtimeconfig.json
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_7\Lab_7\bin\Debug\net6.0\Lab_7.dll
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_7\Lab_7\bin\Debug\net6.0\ref\Lab_7.dll
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_7\Lab_7\bin\Debug\net6.0\Lab_7.pdb
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_7\Lab_7\obj\Debug\net6.0\Lab_7.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_7\Lab_7\obj\Debug\net6.0\Lab_7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_7\Lab_7\obj\Debug\net6.0\Lab_7.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_7\Lab_7\obj\Debug\net6.0\Lab_7.AssemblyInfo.cs
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_7\Lab_7\obj\Debug\net6.0\Lab_7.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_7\Lab_7\obj\Debug\net6.0\Lab_7.dll
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_7\Lab_7\obj\Debug\net6.0\ref\Lab_7.dll
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_7\Lab_7\obj\Debug\net6.0\Lab_7.pdb
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_7\Lab_7\obj\Debug\net6.0\Lab_7.genruntimeconfig.cache
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_7\Lab_7\bin\Debug\net6.0\Lab_7.library.dll
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_7\Lab_7\bin\Debug\net6.0\Lab_7.library.pdb
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_7\Lab_7\obj\Debug\net6.0\Lab_7.csproj.CopyComplete

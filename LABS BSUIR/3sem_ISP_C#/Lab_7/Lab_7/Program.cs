@@ -13,9 +13,15 @@ namespace Lab_7
         {
             IntegralCalculate integral = new IntegralCalculate();
 
-            integral.TimeForCalcuLate += () => integral.ShowTime();
+            integral.TimeForCalcuLate += integral.ShowTime;
+            integral.ProgressBarEvent += integral.OutProgressBar;
 
-            integral.Calculate();
+            Thread thread = new Thread(integral.Calculate);
+            Thread thread1 = new Thread(integral.Calculate);
+            thread.Priority = ThreadPriority.Highest;
+            thread1.Priority = ThreadPriority.Lowest;
+            thread.Start();
+            thread1.Start();
         }
     }
 }
