@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Text;
-using System.Threading;
+//using System.Threading;
 
 namespace Lab_7
 {
@@ -11,21 +11,30 @@ namespace Lab_7
 
         public delegate void ProgressBarDelegate(int percent, string ProgressBar);
         public event ProgressBarDelegate ProgressBarEvent;
-
+        Mutex mutex = new();
+        Semaphore semaphore = new Semaphore(2, 5);
         public void ShowTime(long tic)
         {
-            Console.SetCursorPosition(0, Thread.CurrentThread.ManagedThreadId - 7);
-            Console.WriteLine($"паток {Thread.CurrentThread.ManagedThreadId} закончил выполнение за " + Convert.ToDouble(tic) / 1000);
-            //Console.SetCursorPosition(0, Thread.CurrentThread.ManagedThreadId - 7);
+            mutex.WaitOne();
+            
+            Console.SetCursorPosition(0, Convert.ToInt32(Thread.CurrentThread.Name) - 1);
+            Console.WriteLine($"Паток {Environment.CurrentManagedThreadId} закончил выполнение за " + Convert.ToDouble(tic) / 1000);
+            
+            mutex.ReleaseMutex();
         }
         public void OutProgressBar(int percent, string progressBar)
         {
-            Console.SetCursorPosition(0, Thread.CurrentThread.ManagedThreadId - 7);
-            Console.WriteLine($"Паток {Thread.CurrentThread.ManagedThreadId} процесс { progressBar} {percent}%");
-            //Console.SetCursorPosition(0, Thread.CurrentThread.ManagedThreadId - 7);
+            mutex.WaitOne();
+            
+            Console.SetCursorPosition(0, Convert.ToInt32(Thread.CurrentThread.Name) - 1);
+            Console.WriteLine($"Паток {Environment.CurrentManagedThreadId} процесс {progressBar} {percent}%");
+
+            mutex.ReleaseMutex();
         }
         public void Calculate()
         {
+            semaphore.WaitOne();
+
             Stopwatch sw = Stopwatch.StartNew();
             double sum = 0;
             int percent = 0;
@@ -33,7 +42,7 @@ namespace Lab_7
 
             ProgressBarEvent(0, outString.ToString());
 
-            for (double i = 0; i < 1; i += 0.0000001)//убрал 2 нуля
+            for (double i = 0; i < 1; i += 0.000001)//убрал 2 нуля
             {
                 sum += Math.Sin(i) * 0.000001;
                 
@@ -61,6 +70,8 @@ namespace Lab_7
             }
 
             TimeForCalcuLate(sw.ElapsedMilliseconds);
+
+            semaphore.Release();
         }
     }
 }

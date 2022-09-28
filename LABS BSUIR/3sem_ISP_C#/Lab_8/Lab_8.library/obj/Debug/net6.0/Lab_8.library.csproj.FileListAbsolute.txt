@@ -1,0 +1,12 @@
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_8\Lab_8.library\bin\Debug\net6.0\Lab_8.library.deps.json
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_8\Lab_8.library\bin\Debug\net6.0\Lab_8.library.dll
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_8\Lab_8.library\bin\Debug\net6.0\ref\Lab_8.library.dll
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_8\Lab_8.library\bin\Debug\net6.0\Lab_8.library.pdb
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_8\Lab_8.library\obj\Debug\net6.0\Lab_8.library.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_8\Lab_8.library\obj\Debug\net6.0\Lab_8.library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_8\Lab_8.library\obj\Debug\net6.0\Lab_8.library.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_8\Lab_8.library\obj\Debug\net6.0\Lab_8.library.AssemblyInfo.cs
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_8\Lab_8.library\obj\Debug\net6.0\Lab_8.library.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_8\Lab_8.library\obj\Debug\net6.0\Lab_8.library.dll
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_8\Lab_8.library\obj\Debug\net6.0\ref\Lab_8.library.dll
+C:\Users\HP\Desktop\labs\LABS BSUIR\3sem_ISP_C#\Lab_8\Lab_8.library\obj\Debug\net6.0\Lab_8.library.pdb
