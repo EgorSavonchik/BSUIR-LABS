@@ -4,44 +4,93 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json;
+
 namespace Lab_8.library
 {
-    public class StreamService<T>
+    public class StreamService<T> 
     {
         object locker = new();
-        public async Task WriteToStreamAsync(Stream stream, IEnumerable<T> data)
+
+        public async Task WriteToStreamAsync(Stream stream, IEnumerable<T> data, IProgress<string> progress)
         {
-            lock (locker)
+            progress.Report($"Начало записи в паток {Thread.CurrentThread.ManagedThreadId}");
 
-            Console.WriteLine($"Начало записи в паток {Thread.CurrentThread.ManagedThreadId}" );
+            //IProgress<string> progress = new Progress<string>(obj => { Console.Write($"\rПаток {Environment.CurrentManagedThreadId} {percent}%"); });
 
-            await JsonSerializer.SerializeAsync<IEnumerable<T>>(stream, data);
+            /*for (int i = 0; i < data.Count(); i++)
+            {
+                await JsonSerializer.SerializeAsync<T>(stream, data.ElementAt(i));
 
-            Console.WriteLine($"Конец записи в паток {Thread.CurrentThread.ManagedThreadId}");
+                if(i != data.Count() - 1)
+                {
+                    byte[] second = Encoding.Default.GetBytes(",");
+                    stream.Write(second, 0, second.Length);
+                }
 
+                //Thread.Sleep(1);
+                percent = Convert.ToInt32(i / Convert.ToDouble(data.Count()) * 100);
+                progress.Report((percent).ToString());
+            }*/
 
+            await Task.Run(() =>
+            {
+                JsonSerializer.SerializeAsync<IEnumerable<T>>(stream, data);
+            });
+
+            await Process();
+
+            progress.Report($"\nКонец записи в паток {Thread.CurrentThread.ManagedThreadId}");
+            //Console.WriteLine();
         }
 
-        public async Task CopyFromStreamAsync(Stream stream, string fileName)
+        public async Task CopyFromStreamAsync(Stream stream, string fileName, IProgress<string> progress)
         {
-            lock (locker)
+            progress.Report($"Начало считывания из патока {Thread.CurrentThread.ManagedThreadId}");
 
-            Console.WriteLine($"Начало считывания из патока {Thread.CurrentThread.ManagedThreadId}");
-
+            //byte[] first = Encoding.Default.GetBytes("[");
+            //file.Write(first, 0, first.Length);
             using FileStream file = new FileStream(fileName, FileMode.Create);
             stream.Position = 0;
-            await stream.CopyToAsync(file);
 
-            Console.WriteLine($"Конец считывания из патока {Thread.CurrentThread.ManagedThreadId}");
+            await Task.Run(() =>
+            {
+                stream.CopyToAsync(file);
+            });
+
+            await Process();
+
+            progress.Report($"\nКонец считывания из патока {Thread.CurrentThread.ManagedThreadId}");
+            //await Process();
+            //byte[] second = Encoding.Default.GetBytes("]");
+            //file.Write(second, 0, second.Length);
         }
 
         public async Task<int> GetStatisticsAsync(string fileName, Func<T, bool> filter)
         {
             using FileStream file = new FileStream(fileName, FileMode.Open);
 
-            IEnumerable<T> data = JsonSerializer.Deserialize<IEnumerable<T>>(file);
+            IEnumerable<T> temp = await JsonSerializer.DeserializeAsync<IEnumerable<T>>(file);
+            
+            return temp.Where(filter).Count();
+        }
 
-            return data.Where(filter).Count();
+        private async Task Process()
+        {
+            var p = new Progress<string>(m =>
+            {
+                Console.Write($"\rПаток {Thread.CurrentThread.ManagedThreadId} {m}");
+            });
+
+            await GetProgress(p);
+        }
+
+        private async Task GetProgress(IProgress<string> progress)
+        {
+            for (int i = 0; i <= 100; i += 10)
+            {
+                await Task.Delay(200);
+                progress?.Report(new string($"Завершено на : {i} %"));
+            }
         }
     }
 }
