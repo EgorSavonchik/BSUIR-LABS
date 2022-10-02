@@ -9,28 +9,9 @@ namespace Lab_8.library
 {
     public class StreamService<T> 
     {
-        object locker = new();
-
         public async Task WriteToStreamAsync(Stream stream, IEnumerable<T> data, IProgress<string> progress)
         {
             progress.Report($"Начало записи в паток {Thread.CurrentThread.ManagedThreadId}");
-
-            //IProgress<string> progress = new Progress<string>(obj => { Console.Write($"\rПаток {Environment.CurrentManagedThreadId} {percent}%"); });
-
-            /*for (int i = 0; i < data.Count(); i++)
-            {
-                await JsonSerializer.SerializeAsync<T>(stream, data.ElementAt(i));
-
-                if(i != data.Count() - 1)
-                {
-                    byte[] second = Encoding.Default.GetBytes(",");
-                    stream.Write(second, 0, second.Length);
-                }
-
-                //Thread.Sleep(1);
-                percent = Convert.ToInt32(i / Convert.ToDouble(data.Count()) * 100);
-                progress.Report((percent).ToString());
-            }*/
 
             await Task.Run(() =>
             {
@@ -40,15 +21,12 @@ namespace Lab_8.library
             await Process();
 
             progress.Report($"\nКонец записи в паток {Thread.CurrentThread.ManagedThreadId}");
-            //Console.WriteLine();
         }
 
         public async Task CopyFromStreamAsync(Stream stream, string fileName, IProgress<string> progress)
         {
             progress.Report($"Начало считывания из патока {Thread.CurrentThread.ManagedThreadId}");
 
-            //byte[] first = Encoding.Default.GetBytes("[");
-            //file.Write(first, 0, first.Length);
             using FileStream file = new FileStream(fileName, FileMode.Create);
             stream.Position = 0;
 
@@ -60,9 +38,6 @@ namespace Lab_8.library
             await Process();
 
             progress.Report($"\nКонец считывания из патока {Thread.CurrentThread.ManagedThreadId}");
-            //await Process();
-            //byte[] second = Encoding.Default.GetBytes("]");
-            //file.Write(second, 0, second.Length);
         }
 
         public async Task<int> GetStatisticsAsync(string fileName, Func<T, bool> filter)

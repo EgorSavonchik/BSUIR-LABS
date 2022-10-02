@@ -10,7 +10,7 @@ namespace Lab_8
             Console.WriteLine($"Начало выполнения мэйна, номер патока {Thread.CurrentThread.ManagedThreadId}");
 
             List<Galery> list = new List<Galery>();
-            //list.Add(new Galery(1, "asdfg", 1));
+
             for(int i = 0; i < 1000; i++)
             {
                 list.Add(new Galery(i, "test" + i, i * 10));

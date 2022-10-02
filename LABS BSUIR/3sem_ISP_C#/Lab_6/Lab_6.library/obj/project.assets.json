@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Desktop\\labs\\lab_3sem_C#\\Lab_6\\Lab_6.library\\Lab_6_library.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Desktop\\labs\\LABS BSUIR\\3sem_ISP_C#\\Lab_6\\Lab_6.library\\Lab_6_library.csproj",
       "projectName": "Lab_6_library",
-      "projectPath": "C:\\Users\\HP\\Desktop\\labs\\lab_3sem_C#\\Lab_6\\Lab_6.library\\Lab_6_library.csproj",
+      "projectPath": "C:\\Users\\HP\\Desktop\\labs\\LABS BSUIR\\3sem_ISP_C#\\Lab_6\\Lab_6.library\\Lab_6_library.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Desktop\\labs\\lab_3sem_C#\\Lab_6\\Lab_6.library\\obj\\",
+      "outputPath": "C:\\Users\\HP\\Desktop\\labs\\LABS BSUIR\\3sem_ISP_C#\\Lab_6\\Lab_6.library\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\HP\\Desktop\\labs\\lab_3sem_C#\\Lab_6\\Lab_6\\Lab_6.csproj": {
-              "projectPath": "C:\\Users\\HP\\Desktop\\labs\\lab_3sem_C#\\Lab_6\\Lab_6\\Lab_6.csproj"
+            "C:\\Users\\HP\\Desktop\\labs\\LABS BSUIR\\3sem_ISP_C#\\Lab_6\\Lab_6\\Lab_6.csproj": {
+              "projectPath": "C:\\Users\\HP\\Desktop\\labs\\LABS BSUIR\\3sem_ISP_C#\\Lab_6\\Lab_6\\Lab_6.csproj"
             }
           }
         }
