@@ -4,16 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json;
+using System.Threading;
 
 namespace Lab_8.library
 {
     public class StreamService<T> 
     {
+        private Mutex mutex = new Mutex();
         public async Task WriteToStreamAsync(Stream stream, IEnumerable<T> data, IProgress<string> progress)
         {
             progress.Report($"Начало записи в паток {Thread.CurrentThread.ManagedThreadId}");
 
-            await Task.Run(() =>
+            //mutex.WaitOne();
+
+            //JsonSerializer.SerializeAsync<IEnumerable<T>>(stream, data);
+
+            //mutex.ReleaseMutex();
+
+            await Task.Run(() => //работает как и код сверху
             {
                 JsonSerializer.SerializeAsync<IEnumerable<T>>(stream, data);
             });
@@ -30,7 +38,13 @@ namespace Lab_8.library
             using FileStream file = new FileStream(fileName, FileMode.Create);
             stream.Position = 0;
 
-            await Task.Run(() =>
+            //mutex.WaitOne();
+
+            //stream.CopyToAsync(file);
+
+            //mutex.ReleaseMutex();
+
+            await Task.Run(() => //работает как и код сверху
             {
                 stream.CopyToAsync(file);
             });
@@ -49,7 +63,7 @@ namespace Lab_8.library
             return temp.Where(filter).Count();
         }
 
-        private async Task Process()
+        private async Task Process()//плохо работает при одновременном запуске нескольких
         {
             var p = new Progress<string>(m =>
             {

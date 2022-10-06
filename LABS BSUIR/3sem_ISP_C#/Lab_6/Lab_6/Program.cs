@@ -28,7 +28,7 @@ namespace Lab_6
             MethodInfo Save = Service.GetMethod("SaveData");
             MethodInfo Load = Service.GetMethod("ReadFile");
 
-            object[] argumentsToSave = new object[2];
+            object[] argumentsToSave = new[] {employeeList };// object[2];
             argumentsToSave[0] = employeeList;
             argumentsToSave[1] = "C:\\Users\\HP\\Desktop\\labs\\lab_3sem_C#\\Lab_6\\Lab_6\\data.json";
             Save.Invoke(fs, argumentsToSave);

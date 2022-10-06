@@ -12,7 +12,7 @@ namespace Lab_7
         public delegate void ProgressBarDelegate(int percent, string ProgressBar);
         public event ProgressBarDelegate ProgressBarEvent;
         Mutex mutex = new();
-        Semaphore semaphore = new Semaphore(2, 5);
+        Semaphore semaphore = new Semaphore(2, 2);
         public void ShowTime(long tic)
         {
             mutex.WaitOne();

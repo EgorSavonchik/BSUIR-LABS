@@ -24,12 +24,13 @@ namespace Lab_8
 
             var task1 = ss.WriteToStreamAsync(temp, list, progress);
 
-            task1.Wait();
-            Thread.Sleep(500);
+            //task1.Wait();
+            //Thread.Sleep(500);
+            await Task.Delay(100);//чтобы первый метод точно запустился первым
 
-            var task2 = ss.CopyFromStreamAsync(temp, "C:\\Users\\HP\\Desktop\\labs\\LABS BSUIR\\3sem_ISP_C#\\Lab_8\\Lab_8\\data.txt", progress);            
+            var task2 = ss.CopyFromStreamAsync(temp, "C:\\Users\\HP\\Desktop\\labs\\LABS BSUIR\\3sem_ISP_C#\\Lab_8\\Lab_8\\data.txt", progress);
 
-            task2.Wait();
+            Task.WaitAll(task1, task2);
 
             int result = await ss.GetStatisticsAsync("C:\\Users\\HP\\Desktop\\labs\\LABS BSUIR\\3sem_ISP_C#\\Lab_8\\Lab_8\\data.txt", obj => obj.NumberOfPicture > 50 ? true : false);
             Console.WriteLine(result);
