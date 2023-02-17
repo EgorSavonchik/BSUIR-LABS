@@ -1,4 +1,4 @@
-using System.Threading;
+
 
 namespace lab_1;
 
@@ -21,11 +21,10 @@ public partial class ProgressBar : ContentPage
         cancellationTokenSource = new CancellationTokenSource();
         this.StateHeadLabel.Text = "Computing";
 
-        Task task = Task.Run(() => {
-            CalculateIntegral(cancellationTokenSource.Token);
-            });
+        await  CalculateIntegral(cancellationTokenSource.Token);
+            
 
-        await task;
+        //await task;
     }
 
     private void OnCancelButtonClicked(object sender, EventArgs e)
@@ -41,7 +40,7 @@ public partial class ProgressBar : ContentPage
         this.StateHeadLabel.Text = "Job canceled";
     }
 
-    private void CalculateIntegral(CancellationToken token)
+    private async Task CalculateIntegral(CancellationToken token)
     {
         double integral = 0;
         int temp;
@@ -50,10 +49,10 @@ public partial class ProgressBar : ContentPage
         {
             integral += Math.Sin(i) * 0.00001;
 
-            Device.BeginInvokeOnMainThread(() =>
+            await Device.InvokeOnMainThreadAsync(() =>
             {
                 this.ProgressBarIndicator.Progress = i;
-                this.PercentLabel.Text = (Math.Round(i * 100)).ToString() + "%";
+                this.PercentLabel.Text = Math.Round(i * 100).ToString() + "%";
             });
 
             if(token.IsCancellationRequested)
@@ -67,7 +66,7 @@ public partial class ProgressBar : ContentPage
             }
         }
 
-        Device.BeginInvokeOnMainThread(() =>
+        await Device.InvokeOnMainThreadAsync(() =>
         {
             this.StateHeadLabel.Text = integral.ToString();
         });

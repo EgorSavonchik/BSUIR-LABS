@@ -34,6 +34,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = lab_1.Resources.Styles.Sty
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+[C:/Users/HP/Desktop/labs/LABS_BSUIR/4sem_ISP_C\#/Lab_1/lab_1/views/APIDemoPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = lab_1.views.APIDemoPage.xaml
+build_metadata.AdditionalFiles.TargetPath = views\APIDemoPage.xaml
+build_metadata.AdditionalFiles.RelativePath = views\APIDemoPage.xaml
+
 [C:/Users/HP/Desktop/labs/LABS_BSUIR/4sem_ISP_C\#/Lab_1/lab_1/views/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = lab_1.views.MainPage.xaml

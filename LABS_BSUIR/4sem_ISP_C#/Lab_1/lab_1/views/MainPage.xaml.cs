@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using System.Globalization;
 
 namespace lab_1;
 
@@ -38,6 +39,8 @@ public partial class MainPage : ContentPage
 
 	private void OnArithmeticButtonClicked(object sender, EventArgs e)
 	{
+        Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("en-GB");
+
         if (clear == true)
         {
             this.currentLabel.Text = "0";
@@ -79,6 +82,8 @@ public partial class MainPage : ContentPage
 
 	private void OnEqualsButtonClicked(object sender, EventArgs e)
 	{
+        Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("en-GB");
+
         if (clear == true)
         {
             this.currentLabel.Text = "0";
@@ -99,7 +104,8 @@ public partial class MainPage : ContentPage
 			return;
 		}
 
-        if (this.memoryLabel.Text.Contains('='))
+        if (this.memoryLabel.Text.Contains('=') && this.memoryLabel.Text.Contains('+') || this.memoryLabel.Text.Contains('-') || this.memoryLabel.Text.Contains('/')
+            || this.memoryLabel.Text.Contains('*'))
         {
             char sign = ' ';
 
@@ -119,9 +125,21 @@ public partial class MainPage : ContentPage
             {
                 sign = '*';
             }
+            
+            if(sign != ' ')
+            {
+                this.memoryLabel.Text = this.currentLabel.Text + this.memoryLabel.Text.Remove(0, this.memoryLabel.Text.LastIndexOf(sign));
+			    this.memoryLabel.Text = this.memoryLabel.Text.Remove(this.memoryLabel.Text.Length - 1);
+            }
+            
+        }
+        else if(this.memoryLabel.Text.Contains('=') && !(this.memoryLabel.Text.Contains('+') || this.memoryLabel.Text.Contains('-') || this.memoryLabel.Text.Contains('/')
+            || this.memoryLabel.Text.Contains('*')))
+        {
+            this.currentLabel.Text = this.memoryLabel.Text.Remove(this.memoryLabel.Text.Length - 1, 1);
+            clear = true;
 
-            this.memoryLabel.Text = this.currentLabel.Text + this.memoryLabel.Text.Remove(0, this.memoryLabel.Text.LastIndexOf(sign));
-			this.memoryLabel.Text = this.memoryLabel.Text.Remove(this.memoryLabel.Text.Length - 1);
+            return;
         }
 		else
 		{

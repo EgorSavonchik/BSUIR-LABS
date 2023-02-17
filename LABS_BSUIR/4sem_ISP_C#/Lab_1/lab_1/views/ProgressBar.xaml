@@ -3,24 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="lab_1.ProgressBar"
              Title="ProgressBar">
-    
-    <StackLayout Orientation="Vertical">
+
+    <VerticalStackLayout>
         <Label 
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" x:Name = "StateHeadLabel"/>
 
+        
+        <ProgressBar Progress="0" x:Name="ProgressBarIndicator" ProgressColor="Gold" Margin="20"/>
+        <Label Text="%" x:Name="PercentLabel" HorizontalOptions="Center"/>
 
-        <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
-            <ProgressBar Progress="0" x:Name="ProgressBarIndicator" ProgressColor="Gold"/>
-            <Label Text="%" x:Name="PercentLabel"/>
-        </HorizontalStackLayout>
 
-        <HorizontalStackLayout VerticalOptions="EndAndExpand" HorizontalOptions="Center">
+
+        <HorizontalStackLayout VerticalOptions="End" HorizontalOptions="Center" Spacing="30">
             <Button Text="Start" Clicked="OnStartButtonClicked"/>
             <Button Text="Cancel" Clicked="OnCancelButtonClicked"/>
         </HorizontalStackLayout>
-        
-    </StackLayout>
-    
+    </VerticalStackLayout>
+
 </ContentPage>

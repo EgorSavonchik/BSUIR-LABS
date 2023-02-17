@@ -17,7 +17,12 @@ public static class MauiProgram
 
         builder.Services.AddTransient<IDbService, SQLiteService>();
 		builder.Services.AddSingleton<SQLiteDBpage>();
-
-        return builder.Build();
+		
+		builder.Services.AddTransient<IRateService, RateService>();
+		builder.Services.AddSingleton<APIDemoPage>();
+		
+		//builder.Services.AddHttpClient <IHttpService, IRateService >(opt => opt.BaseAddress = new Uri("https://www.nbrb.by/api/exrates/rates"));	
+        builder.Services.AddHttpClient<IRateService, RateService>();
+		return builder.Build();
 	}
 }

@@ -32,5 +32,14 @@
                 Route="SQLiteDBpage" />
         </Tab>
     </FlyoutItem>
-    
+
+    <FlyoutItem Title="APIDemo">
+        <Tab>
+            <ShellContent
+                Title="APIDemo"
+                ContentTemplate="{DataTemplate local:APIDemoPage}"
+                Route="APIDemo" />
+        </Tab>
+    </FlyoutItem>
+
 </Shell>
