@@ -22,7 +22,7 @@ public partial class SQLiteDBpage : ContentPage
 
     public void OnLoadPage(object sender, EventArgs e)
     {
-        //db.Init();
+        db.Init();
 
         List<Brigada> brigados = db.GetAllBrigades().ToList();
         List<string> Names = new List<string>();
@@ -34,5 +34,8 @@ public partial class SQLiteDBpage : ContentPage
 
         this.Picker.ItemsSource = Names;
         this.Picker.ItemsSource = this.Picker.GetItemsAsArray();
+
+        this.Picker.SelectedIndex = 0;
+        OnSelectedIndexChanged(sender, e);
     }
 }

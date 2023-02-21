@@ -116,9 +116,7 @@ C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\bin\Debug\net6.0-win
 C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Newtonsoft.Json.dll
 C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\SQLite-net.dll
 C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.batteries_v2.dll
-C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.nativelibrary.dll
 C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.core.dll
-C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.provider.dynamic_cdecl.dll
 C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Microsoft.Graphics.Canvas.dll
 C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.dll
 C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\e_sqlite3.dll
@@ -371,3 +369,6 @@ C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\obj\Debug\net6.0-win
 C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.batteries_green.dll
+C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\clrcompression.dll

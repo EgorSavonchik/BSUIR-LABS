@@ -11,28 +11,15 @@ namespace lab_1.Services
 {
     public class RateService : IRateService
     {
-        public HttpClient httpClient { get; set; }
-        JsonSerializerOptions serializerOptions ;
+        public HttpClient httpClient;
         public RateService()
         {
             this.httpClient = new HttpClient();
-
-            this.serializerOptions = new JsonSerializerOptions
-            {
-                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-                WriteIndented = true
-            };
         }
 
-        public RateService(HttpClient httpClient) 
+        public RateService(HttpClient httpClient) //не работает внедрение
         {
             this.httpClient = httpClient;
-
-            serializerOptions = new JsonSerializerOptions
-            {
-                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-                WriteIndented = true
-            };
         }
 
         public IEnumerable<Rate> GetRates(DateTime date)

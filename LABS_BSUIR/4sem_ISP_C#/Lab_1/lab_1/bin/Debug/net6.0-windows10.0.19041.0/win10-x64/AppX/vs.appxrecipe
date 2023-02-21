@@ -29,25 +29,25 @@
     <AppXManifest Include="C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-02-16T22:16:10.597</Modified>
+      <Modified>2023-02-21T19:06:42.505</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-02-16T22:16:10.156</Modified>
+      <Modified>2023-02-21T19:06:40.917</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\lab_1.runtimeconfig.json">
       <PackagePath>lab_1.runtimeconfig.json</PackagePath>
-      <Modified>2023-02-16T17:38:22.607</Modified>
+      <Modified>2023-02-21T19:00:38.896</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\lab_1.dll">
       <PackagePath>lab_1.dll</PackagePath>
-      <Modified>2023-02-16T22:16:08.134</Modified>
+      <Modified>2023-02-21T19:06:38.705</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>lab_1.exe</PackagePath>
-      <Modified>2023-02-16T22:16:08.161</Modified>
+      <Modified>2023-02-21T19:06:38.721</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.13\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -1081,25 +1081,25 @@
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
       <Modified>2022-11-24T02:10:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\sqlite-net-pcl\1.8.116\lib\netstandard2.0\SQLite-net.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\sqlite-net-pcl\1.6.292\lib\netstandard1.1\SQLite-net.dll">
       <PackagePath>SQLite-net.dll</PackagePath>
-      <Modified>2021-09-02T21:04:32.000</Modified>
+      <Modified>2019-09-20T03:20:34.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\sqlitepclraw.bundle_green\2.0.4\lib\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\sqlitepclraw.bundle_green\1.1.13\lib\netcoreapp\SQLitePCLRaw.batteries_green.dll">
+      <PackagePath>SQLitePCLRaw.batteries_green.dll</PackagePath>
+      <Modified>2019-01-24T15:30:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\sqlitepclraw.bundle_green\1.1.13\lib\netcoreapp\SQLitePCLRaw.batteries_v2.dll">
       <PackagePath>SQLitePCLRaw.batteries_v2.dll</PackagePath>
-      <Modified>2020-09-03T17:13:26.000</Modified>
+      <Modified>2019-01-24T15:30:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\sqlitepclraw.bundle_green\2.0.4\lib\netcoreapp3.1\SQLitePCLRaw.nativelibrary.dll">
-      <PackagePath>SQLitePCLRaw.nativelibrary.dll</PackagePath>
-      <Modified>2020-09-03T17:13:02.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\sqlitepclraw.core\2.0.4\lib\netstandard2.0\SQLitePCLRaw.core.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\sqlitepclraw.core\1.1.13\lib\netstandard1.1\SQLitePCLRaw.core.dll">
       <PackagePath>SQLitePCLRaw.core.dll</PackagePath>
-      <Modified>2020-09-03T17:13:04.000</Modified>
+      <Modified>2019-01-24T15:30:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\sqlitepclraw.provider.dynamic_cdecl\2.0.4\lib\netstandard2.0\SQLitePCLRaw.provider.dynamic_cdecl.dll">
-      <PackagePath>SQLitePCLRaw.provider.dynamic_cdecl.dll</PackagePath>
-      <Modified>2020-09-03T17:13:18.000</Modified>
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\sqlitepclraw.provider.e_sqlite3.netstandard11\1.1.13\lib\netstandard1.1\SQLitePCLRaw.provider.e_sqlite3.dll">
+      <PackagePath>SQLitePCLRaw.provider.e_sqlite3.dll</PackagePath>
+      <Modified>2019-01-24T15:30:12.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.graphics.win2d\1.0.3.1\runtimes\win10-x64\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
@@ -1109,13 +1109,17 @@
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
       <Modified>2022-07-19T16:53:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\sqlitepclraw.lib.e_sqlite3\2.0.4\runtimes\win-x64\native\e_sqlite3.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\runtime.win7-x64.runtime.native.system.io.compression\4.3.0\runtimes\win7-x64\native\clrcompression.dll">
+      <PackagePath>clrcompression.dll</PackagePath>
+      <Modified>2016-11-05T04:34:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\sqlitepclraw.lib.e_sqlite3.v110_xp\1.1.13\runtimes\win-x64\native\e_sqlite3.dll">
       <PackagePath>e_sqlite3.dll</PackagePath>
-      <Modified>2020-08-17T14:38:20.000</Modified>
+      <Modified>2018-12-18T02:20:32.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\lab_1.deps.json">
       <PackagePath>lab_1.deps.json</PackagePath>
-      <Modified>2023-02-16T22:16:10.407</Modified>
+      <Modified>2023-02-21T19:06:42.054</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.ref.win\6.0.548\ref\net6.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>

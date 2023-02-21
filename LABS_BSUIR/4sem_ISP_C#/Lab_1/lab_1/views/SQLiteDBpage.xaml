@@ -5,13 +5,14 @@
 
     <ScrollView>
         <VerticalStackLayout>
-            <Picker x:Name="Picker" SelectedIndexChanged="OnSelectedIndexChanged"/>
+            <HorizontalStackLayout>
+                <Label Text="Select: " VerticalOptions="Center" FontSize="26"/>
+                <Picker x:Name="Picker" SelectedIndexChanged="OnSelectedIndexChanged" FontSize="26"/>
+            </HorizontalStackLayout>
 
             <CollectionView x:Name="resultBox">
                 <CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                   
-                    </x:Array>
+                    <x:Array Type="{x:Type x:String}"/>
                 </CollectionView.ItemsSource>
             </CollectionView>
         </VerticalStackLayout>

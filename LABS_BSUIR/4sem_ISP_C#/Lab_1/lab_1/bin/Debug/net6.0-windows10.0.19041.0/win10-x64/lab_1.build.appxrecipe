@@ -811,20 +811,20 @@
     <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\newtonsoft.json\13.0.2\lib\net6.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\sqlite-net-pcl\1.8.116\lib\netstandard2.0\SQLite-net.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\sqlite-net-pcl\1.6.292\lib\netstandard1.1\SQLite-net.dll">
       <PackagePath>SQLite-net.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\sqlitepclraw.bundle_green\2.0.4\lib\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\sqlitepclraw.bundle_green\1.1.13\lib\netcoreapp\SQLitePCLRaw.batteries_green.dll">
+      <PackagePath>SQLitePCLRaw.batteries_green.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\sqlitepclraw.bundle_green\1.1.13\lib\netcoreapp\SQLitePCLRaw.batteries_v2.dll">
       <PackagePath>SQLitePCLRaw.batteries_v2.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\sqlitepclraw.bundle_green\2.0.4\lib\netcoreapp3.1\SQLitePCLRaw.nativelibrary.dll">
-      <PackagePath>SQLitePCLRaw.nativelibrary.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\sqlitepclraw.core\2.0.4\lib\netstandard2.0\SQLitePCLRaw.core.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\sqlitepclraw.core\1.1.13\lib\netstandard1.1\SQLitePCLRaw.core.dll">
       <PackagePath>SQLitePCLRaw.core.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\sqlitepclraw.provider.dynamic_cdecl\2.0.4\lib\netstandard2.0\SQLitePCLRaw.provider.dynamic_cdecl.dll">
-      <PackagePath>SQLitePCLRaw.provider.dynamic_cdecl.dll</PackagePath>
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\sqlitepclraw.provider.e_sqlite3.netstandard11\1.1.13\lib\netstandard1.1\SQLitePCLRaw.provider.e_sqlite3.dll">
+      <PackagePath>SQLitePCLRaw.provider.e_sqlite3.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.graphics.win2d\1.0.3.1\runtimes\win10-x64\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
@@ -832,7 +832,10 @@
     <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.windowsappsdk\1.1.3\runtimes\win10-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\sqlitepclraw.lib.e_sqlite3\2.0.4\runtimes\win-x64\native\e_sqlite3.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\runtime.win7-x64.runtime.native.system.io.compression\4.3.0\runtimes\win7-x64\native\clrcompression.dll">
+      <PackagePath>clrcompression.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\sqlitepclraw.lib.e_sqlite3.v110_xp\1.1.13\runtimes\win-x64\native\e_sqlite3.dll">
       <PackagePath>e_sqlite3.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\lab_1.deps.json">

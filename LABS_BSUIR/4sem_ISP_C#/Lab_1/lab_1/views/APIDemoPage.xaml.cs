@@ -32,14 +32,14 @@ public partial class APIDemoPage : ContentPage
 
 	public void OnTransferButtonClicked(object sender, EventArgs e)
 	{
-        this.TransferOutLabel.Text = (Convert.ToInt32(this.EnterTransferEntry.Text) / rates[this.TransferPicker.SelectedIndex].Cur_OfficialRate 
-			* rates[this.TransferPicker.SelectedIndex].Cur_Scale).ToString();
+        this.TransferOutLabel.Text = Math.Round((Convert.ToInt32(this.EnterTransferEntry.Text) / rates[this.TransferPicker.SelectedIndex].Cur_OfficialRate 
+			* rates[this.TransferPicker.SelectedIndex].Cur_Scale).Value, 5).ToString();
 	}
 
 	public void OnReverseTransferButtonClicked(object sender, EventArgs e) 
 	{
-        this.ReverseTransferOutLabel.Text = (Convert.ToInt32(this.EnterReverseTransferEntry.Text) * rates[this.ReverseTransferPicker.SelectedIndex].Cur_OfficialRate
-			/ rates[this.ReverseTransferPicker.SelectedIndex].Cur_Scale).ToString();
+        this.ReverseTransferOutLabel.Text = Math.Round((Convert.ToInt32(this.EnterReverseTransferEntry.Text) * rates[this.ReverseTransferPicker.SelectedIndex].Cur_OfficialRate
+			/ rates[this.ReverseTransferPicker.SelectedIndex].Cur_Scale).Value, 5).ToString();
     }
 
 	public void OnDateSelected(object sender, EventArgs e) 
