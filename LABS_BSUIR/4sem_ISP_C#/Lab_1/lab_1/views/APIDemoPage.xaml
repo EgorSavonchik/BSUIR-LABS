@@ -7,7 +7,7 @@
 
         <HorizontalStackLayout>
             <Label Text="Transfer BY to selected currency: " VerticalOptions="Center"/> 
-            <Picker x:Name = "TransferPicker" Title="Select"/>
+            <Picker x:Name = "TransferPicker" Title="Select" />
         </HorizontalStackLayout>
         
         <HorizontalStackLayout>
@@ -18,7 +18,7 @@
 
         <HorizontalStackLayout>
             <Label Text="Transfer selected currency to BY: " VerticalOptions="Center"/>
-            <Picker x:Name = "ReverseTransferPicker" Title="Select"/>
+            <Picker x:Name = "ReverseTransferPicker" Title="Select" />
         </HorizontalStackLayout>
         
         <HorizontalStackLayout>

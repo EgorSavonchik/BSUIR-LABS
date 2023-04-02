@@ -10,6 +10,8 @@ namespace Lab_3//вариант 8
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("xiy" + 5);
+
             Journal journal = new Journal();
 
             Hotel hotel = new Hotel();

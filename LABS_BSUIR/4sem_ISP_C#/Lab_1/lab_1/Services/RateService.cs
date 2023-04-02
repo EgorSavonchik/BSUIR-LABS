@@ -12,12 +12,8 @@ namespace lab_1.Services
     public class RateService : IRateService
     {
         public HttpClient httpClient;
-        public RateService()
-        {
-            this.httpClient = new HttpClient();
-        }
 
-        public RateService(HttpClient httpClient) //не работает внедрение
+        public RateService(HttpClient httpClient)
         {
             this.httpClient = httpClient;
         }

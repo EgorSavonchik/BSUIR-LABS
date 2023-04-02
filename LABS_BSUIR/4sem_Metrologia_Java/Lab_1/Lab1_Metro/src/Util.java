@@ -1,4 +1,8 @@
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Util
 {
@@ -33,204 +37,60 @@ public class Util
         return result;
     }
 
-    public static int wordOperatorCount(String source, String ch) // совпадение строки спереди может быть таб
+    public static void ariphmeticOperator(Map<String, Integer> operators, String line)
     {
-        int result = 0;
-        int temp = 0;
+        String[] signatures = {"+", "-", "*", "/", "%", "<", ">", "=", "==", "!=", ">=", "<=", "&&", "||", "|", "&", "<<", ">>",
+            "^", "+=", "-=", "*=", "/=", "&=", "%=", "|=", "^=", ">>=", "<<="};
 
-        for(int i = 0; i < source.length(); i++)
+        if(line.length() != 0 && line.charAt(0) == '#')
         {
-            if(source.charAt(i) == ch.charAt(temp) && (source.charAt(i - 1 - temp) == ' ' ||
-                    source.charAt(i - 1 - temp) == '\t'))
-            {
-                temp++;
+            return;
+        }
 
-                if(temp == ch.length() && (source.charAt(i - temp) == ' ' || source.charAt(i - temp) == '\t')
-                        && source.charAt(i + 1) == ' ')
-                {
-                    result++;
-                    temp = 0;
-                }
-
-                if(temp == ch.length())
-                {
-                    temp = 0;
-                }
-            }
-            else
+        for(String sign : signatures)
+        {
+            if(line.contains(sign))
             {
-                temp = 0;
+                operators.put(sign, (operators.get(sign) == null ? 0 : operators.get(sign)) + Util.CountOperator(line, sign));
             }
         }
 
-        return result;
-    }
-
-
-
-    public static void ariphmeticOperator(HashMap<String, Integer> operators, String line)
-    {
-        if(line.contains("+"))
+        for(int i = 0; i < line.length(); i++)
         {
-            operators.put("+", (operators.get("+") == null ? 0 : operators.get("+")) + Util.CountOperator(line, "+"));
-        }
+            int temp = 0;
 
-        if(line.contains("-"))
-        {
-            operators.put("-", (operators.get("-") == null ? 0 : operators.get("-")) + Util.CountOperator(line, "-"));
-        }
+            if(line.charAt(i) == '*' && line.charAt(i - 1) != ' ')
+            {
+                while(line.charAt(i) == '*')
+                {
+                    i++;
+                    temp++;
+                }
+            }
 
-        if(line.contains("*"))
-        {
-            operators.put("*", (operators.get("*") == null ? 0 : operators.get("*")) + Util.CountOperator(line, "*"));
-        }
-
-        if(line.contains("/"))
-        {
-            operators.put("/", (operators.get("/") == null ? 0 : operators.get("/")) + Util.CountOperator(line, "/"));
-        }
-
-        if(line.contains("%"))
-        {
-            operators.put("%", (operators.get("%") == null ? 0 : operators.get("%")) + Util.CountOperator(line, "%"));
-        }
-
-        if(line.contains("<"))
-        {
-            operators.put("<", (operators.get("<") == null ? 0 : operators.get("<")) + Util.CountOperator(line, "<"));
-        }
-
-        if(line.contains(">"))
-        {
-            operators.put(">", (operators.get(">") == null ? 0 : operators.get(">")) + Util.CountOperator(line, ">"));
-        }
-
-        if(line.contains("="))
-        {
-            operators.put("=", (operators.get("=") == null ? 0 : operators.get("=")) + Util.CountOperator(line, "="));
-        }
-
-        if(line.contains("=="))
-        {
-            operators.put("==", (operators.get("==") == null ? 0 : operators.get("==")) + Util.CountOperator(line, "=="));
-        }
-
-        if(line.contains("!="))
-        {
-            operators.put("!=", (operators.get("!=") == null ? 0 : operators.get("!=")) + Util.CountOperator(line, "!="));
-        }
-
-        if(line.contains(">="))
-        {
-            operators.put(">=", (operators.get(">=") == null ? 0 : operators.get(">=")) + Util.CountOperator(line, ">="));
-        }
-
-        if(line.contains("<="))
-        {
-            operators.put("<=", (operators.get("<=") == null ? 0 : operators.get("<=")) + Util.CountOperator(line, "<="));
-        }
-
-        if(line.contains("&&"))
-        {
-            operators.put("&&", (operators.get("&&") == null ? 0 : operators.get("&&")) + Util.CountOperator(line, "&&"));
-        }
-
-        if(line.contains("||"))
-        {
-            operators.put("||", (operators.get("||") == null ? 0 : operators.get("||")) + Util.CountOperator(line, "||"));
-        }
-
-        if(line.contains("|"))
-        {
-            operators.put("|", (operators.get("|") == null ? 0 : operators.get("|")) + Util.CountOperator(line, "|"));
-        }
-
-        if(line.contains("&"))
-        {
-            operators.put("&", (operators.get("&") == null ? 0 : operators.get("&")) + Util.CountOperator(line, "&"));
-        }
-
-        if(line.contains("<<"))
-        {
-            operators.put("<<", (operators.get("<<") == null ? 0 : operators.get("<<")) + Util.CountOperator(line, "<<"));
-        }
-
-        if(line.contains(">>"))
-        {
-            operators.put(">>", (operators.get(">>") == null ? 0 : operators.get(">>")) + Util.CountOperator(line, ">>"));
-        }
-
-        if(line.contains("^"))
-        {
-            operators.put("^", (operators.get("^") == null ? 0 : operators.get("^")) + Util.CountOperator(line, "^"));
-        }
-
-        if(line.contains("+="))
-        {
-            operators.put("+=", (operators.get("+=") == null ? 0 : operators.get("+=")) + Util.CountOperator(line, "+="));
-        }
-
-        if(line.contains("-="))
-        {
-            operators.put("-=", (operators.get("-=") == null ? 0 : operators.get("-=")) + Util.CountOperator(line, "-="));
-        }
-
-        if(line.contains("/="))
-        {
-            operators.put("/=", (operators.get("/=") == null ? 0 : operators.get("/=")) + Util.CountOperator(line, "/="));
-        }
-
-        if(line.contains("*="))
-        {
-            operators.put("*=", (operators.get("*=") == null ? 0 : operators.get("*=")) + Util.CountOperator(line, "*="));
-        }
-
-        if(line.contains("%="))
-        {
-            operators.put("%=", (operators.get("%=") == null ? 0 : operators.get("%=")) + Util.CountOperator(line, "%="));
-        }
-
-        if(line.contains("&="))
-        {
-            operators.put("&=", (operators.get("&=") == null ? 0 : operators.get("&=")) + Util.CountOperator(line, "&="));
-        }
-
-        if(line.contains("|="))
-        {
-            operators.put("|=", (operators.get("|=") == null ? 0 : operators.get("|=")) + Util.CountOperator(line, "|="));
-        }
-
-        if(line.contains("^="))
-        {
-            operators.put("^=", (operators.get("^=") == null ? 0 : operators.get("^=")) + Util.CountOperator(line, "^="));
-        }
-
-        if(line.contains(">>="))
-        {
-            operators.put(">>=", (operators.get(">>=") == null ? 0 : operators.get(">>=")) + Util.CountOperator(line, ">>="));
-        }
-
-        if(line.contains("<<="))
-        {
-            operators.put("<<=", (operators.get("<<=") == null ? 0 : operators.get("<<=")) + Util.CountOperator(line, "<<="));
+            if(temp != 0)
+            {
+                operators.put("ptr" + "*".repeat(temp), (operators.get("ptr" + "*".repeat(temp)) == null ? 0 :
+                        operators.get("ptr" + "*".repeat(temp))) + 1);
+            }
         }
 
         if(line.contains("if"))
         {
             operators.put("if...else", (operators.get("if...else") == null ? 0 :
-                    operators.get("if...else")) + Util.wordOperatorCount(line, "if"));
+                    operators.get("if...else")) + Util.CountOperator(line, "if"));
         }
 
         if(line.contains("delete"))
         {
             operators.put("delete", (operators.get("delete") == null ? 0 :
-                    operators.get("delete")) + Util.wordOperatorCount(line, "delete"));
+                    operators.get("delete")) + Util.CountOperator(line, "delete"));
         }
 
         if(line.contains("delete[]"))
         {
             operators.put("delete[]", (operators.get("delete[]") == null ? 0 :
-                    operators.get("delete[]")) + Util.wordOperatorCount(line, "delete[]"));
+                    operators.get("delete[]")) + Util.CountOperator(line, "delete[]"));
         }
 
         if(line.contains("return"))
@@ -257,13 +117,31 @@ public class Util
         if(line.contains("for"))
         {
             operators.put("for", (operators.get("for") == null ? 0 :
-                    operators.get("for")) + Util.wordOperatorCount(line, "for"));
+                    operators.get("for")) + Util.CountOperator(line, "for"));
         }
 
         if(line.contains("while"))
         {
             operators.put("while", (operators.get("while") == null ? 0 :
-                    operators.get("while")) + Util.wordOperatorCount(line, "while"));
+                    operators.get("while")) + Util.CountOperator(line, "while"));
+        }
+
+        if(line.contains(", "))
+        {
+            operators.put(",", (operators.get(",") == null ? 0 :
+                    operators.get(",")) + (line.length() - line.replace(", ", " ").length()));
+        }
+
+        if(line.contains("::"))
+        {
+            operators.put("::", (operators.get("::") == null ? 0 :
+                    operators.get("::")) + (line.length() - line.replace("::", " ").length()));
+        }
+
+        if(line.contains("!"))
+        {
+            operators.put("!", (operators.get("!") == null ? 0 : operators.get("!")) +
+                    Math.toIntExact(line.replace("!=", "").chars().filter(ch ->  ch == '!').count()));
         }
 
         if(line.contains("(") && (line.charAt(line.indexOf("(") - 1) != ' '  && line.charAt(line.indexOf("(") - 1) != '\t'))
@@ -286,8 +164,93 @@ public class Util
 
                 operators.put(func + "()", (operators.get(func + "()") == null ? 0 : operators.get(func + "()")) + 1);
 
-                temp = temp.substring(temp.indexOf("(") + 1, temp.length());
+                temp = temp.substring(temp.indexOf("(") + 1);
             }
         }
+
+        operators.put("[]", (operators.get("[]") == null ? 0 : operators.get("[]")) +
+                Math.toIntExact(line.replace("delete[]", "").chars().filter(ch ->  ch == '[').count()));
+    }
+
+    public static void findOperands(String line, Map<String, Integer> operands, Map<String, Integer> onlyOperators)
+    {
+        if(line.length() != 0 && line.charAt(0) == '#')
+        {
+            return;
+        }
+
+        String[] forDelete = {"{", "}", "(", ")", "[", "]", ";", "if", "else", "delete"};
+        String[] types = {"int", "double", "char", "bool"};
+
+        for(String str : forDelete)
+        {
+            line = line.replace(str, " ");
+        }
+
+        if(line.contains("std::"))
+        {
+            for(int i = 0; i < line.length() - 5; i++)
+            {
+                if(line.substring(i, i + 5).equals("std::"))
+                {
+                    for(int j = i; j < line.length(); j++)
+                    {
+                        if(line.charAt(j) == ' ')
+                        {
+                            line = line.replace(line.substring(i, j), "");
+
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        for(String key : onlyOperators.keySet())
+        {
+            if(key.contains("("))
+            {
+                key = key.substring(0, key.length() - 2);
+            }
+
+            line = line.replace(key, " ");
+        }
+
+        for(String str : types)
+        {
+            line = line.replace(str, " ");
+        }
+
+        if(line.contains("\""))
+        {
+            String tempStr;
+
+            for (int i = 0; i < line.length(); i++)
+            {
+                i = line.indexOf("\"");
+
+                if(i == -1)
+                {
+                    break;
+                }
+
+                tempStr = line.substring(i, line.indexOf("\"", i + 1) + 1);
+
+                operands.put(tempStr, (operands.get(tempStr) == null ? 0 : operands.get(tempStr)) + 1);
+                line = line.replace(tempStr, " ");
+            }
+        }
+
+        Arrays.stream(line.split(" ")).forEach(str ->
+        {
+            if (str == "")
+            {
+                return;
+            }
+
+            operands.put(str, (operands.get(str) == null ? 0 : operands.get(str)) + 1);
+        });
+
+        //System.out.println(line);
     }
 }

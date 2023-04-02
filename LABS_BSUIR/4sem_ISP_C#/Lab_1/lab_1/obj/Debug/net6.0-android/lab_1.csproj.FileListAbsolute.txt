@@ -1920,9 +1920,9 @@ C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\obj\Debug\net6.0-and
 C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\obj\Debug\net6.0-android\lp\158\jl\files.cache
 C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\obj\Debug\net6.0-android\lp\159\jl\files.cache
 C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\obj\Debug\net6.0-android\lp\160\jl\files.cache
-C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\obj\Debug\net6.0-android\android\assets\mscorlib.dll
 C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\obj\Debug\net6.0-android\android\assets\SQLitePCLRaw.batteries_green.dll
 C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\obj\Debug\net6.0-android\android\assets\SQLitePCLRaw.lib.e_sqlite3.dll
+C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\obj\Debug\net6.0-android\android\assets\mscorlib.dll
 C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\obj\Debug\net6.0-android\android\assets\System.Collections.Concurrent.dll
 C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\obj\Debug\net6.0-android\android\assets\System.Data.dll
 C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\obj\Debug\net6.0-android\android\assets\System.dll

@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-02-21T19:06:42.505</Modified>
+      <Modified>2023-02-28T12:57:46.652</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-02-21T19:06:40.917</Modified>
+      <Modified>2023-02-22T06:46:20.187</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\lab_1.runtimeconfig.json">
       <PackagePath>lab_1.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\lab_1.dll">
       <PackagePath>lab_1.dll</PackagePath>
-      <Modified>2023-02-21T19:06:38.705</Modified>
+      <Modified>2023-02-22T07:03:26.907</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>lab_1.exe</PackagePath>
-      <Modified>2023-02-21T19:06:38.721</Modified>
+      <Modified>2023-02-22T07:03:26.928</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.13\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -1119,7 +1119,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\Desktop\labs\LABS_BSUIR\4sem_ISP_C#\Lab_1\lab_1\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\lab_1.deps.json">
       <PackagePath>lab_1.deps.json</PackagePath>
-      <Modified>2023-02-21T19:06:42.054</Modified>
+      <Modified>2023-02-28T12:57:45.918</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.ref.win\6.0.548\ref\net6.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
