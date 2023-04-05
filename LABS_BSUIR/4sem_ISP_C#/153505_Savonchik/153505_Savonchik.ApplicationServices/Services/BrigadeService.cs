@@ -3,6 +3,7 @@ using _153505_Savonchik.Domain.Abstractions;
 using _153505_Savonchik.Domain.Entities;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,11 +24,10 @@ namespace _153505_Savonchik.ApplicationServices.Services
             return _unitOfWork.BrigadeRepository.AddAsync(item);
         }
 
-        public Task AddWorkByBrigade(int brigadeId, Work work)
+        public async Task AddWorkByBrigade(int brigadeId, Work work)
         {
-            _unitOfWork.BrigadeRepository.GetByIdAsync(brigadeId).Result.Works.Add(work); // правильно ли??
-
-            return Task.CompletedTask;
+            var brigade = await _unitOfWork.BrigadeRepository.GetByIdAsync(brigadeId);
+            brigade.Works.Add(work);
         }
 
         public Task DeleteAsync(int id)
@@ -40,9 +40,9 @@ namespace _153505_Savonchik.ApplicationServices.Services
             return _unitOfWork.BrigadeRepository.DeleteAsync(item);
         }
 
-        public Task<IReadOnlyList<Brigade>> GetAllAsync()
+        public async Task<IReadOnlyList<Brigade>> GetAllAsync()
         {
-            return _unitOfWork.BrigadeRepository.ListAllAsync();
+            return await _unitOfWork.BrigadeRepository.ListAllAsync();
         }
 
         public Task<IReadOnlyList<Work>> GetAllWorksByBrigadeAsync(int id)

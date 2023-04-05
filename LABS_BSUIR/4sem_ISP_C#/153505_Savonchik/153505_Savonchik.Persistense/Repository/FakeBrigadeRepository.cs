@@ -17,7 +17,7 @@ namespace _153505_Savonchik.Persistense.Repository
                 }, 
                 new Brigade() 
                 {
-                    Id=2, Name="<Бригада Косьмина", NumberOfWorkers = 5, Works = new List<Work>() 
+                    Id=2, Name="Бригада Косьмина", NumberOfWorkers = 5, Works = new List<Work>() 
                 }
             };
         }

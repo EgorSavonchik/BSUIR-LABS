@@ -1,10 +1,12 @@
 ﻿using _153505_Savonchik.ApplicationServices.Abstractions;
 using _153505_Savonchik.ApplicationServices.Services;
 using _153505_Savonchik.Domain.Abstractions;
+using _153505_Savonchik.Persistense.Data;
 using _153505_Savonchik.Persistense.Repository;
 using _153505_Savonchik.UI.Pages;
 using _153505_Savonchik.UI.ViewModels;
 using CommunityToolkit.Maui;
+using Microsoft.EntityFrameworkCore;
 
 namespace _153505_Savonchik.UI;
 
@@ -29,14 +31,19 @@ public static class MauiProgram
 
     private static void SetupServices(IServiceCollection services)
     {
-        //Services
+		var dataPath = Path.Combine(FileSystem.Current.AppDataDirectory, "Savonchik.db");
+			
+		//Services
+		services.AddDbContext<AppDbContext>(opt=>opt.UseSqlite($"Data Source = {dataPath}"));
 		services.AddSingleton<IUnitOfWork, FakeUnitOfWork>();
         services.AddSingleton<IBrigadeService, BrigadeService>();
         services.AddSingleton<IWorkService, WorkService>();
 
-        //Pages
+		//Pages
+
+		services.AddSingleton<BrigadesManager>();
 
         //ViewModels
-        services.AddSingleton<BrigadesManagerViewModel>(); // не работает
+        services.AddSingleton<BrigadesManagerViewModel>(); 
     }
 }

@@ -23,12 +23,12 @@ namespace _153505_Savonchik.Persistense.Repository
 
         public async Task AddAsync(T entity, CancellationToken cancellationToken = default)
         {
-            await _entities.AddAsync(entity, cancellationToken); // надо ли что-то возращать, например комплите таск?
+            await _entities.AddAsync(entity, cancellationToken);
         }
 
         public async Task DeleteAsync(T entity, CancellationToken cancellationToken = default)
         {
-            _entities.Remove(entity); // не очень асинк ремув
+            _entities.Remove(entity); 
         }
 
         public async Task<T> FirstOrDefaultAsync(Expression<Func<T, bool>> filter, CancellationToken cancellationToken = default)

@@ -1,24 +1,26 @@
-﻿using _153505_Savonchik.ApplicationServices.Services;
+﻿using _153505_Savonchik.ApplicationServices.Abstractions;
+using _153505_Savonchik.ApplicationServices.Services;
 using _153505_Savonchik.Domain.Entities;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 
 namespace _153505_Savonchik.UI.ViewModels
 {
     public partial class BrigadesManagerViewModel : ObservableObject
     {
-        private BrigadeService _brigadeService;
-        private WorkService _workService;
+        private IBrigadeService _brigadeService;
+        private IWorkService _workService;
 
-        public BrigadesManagerViewModel(BrigadeService brigadeService, WorkService workService) 
+        public BrigadesManagerViewModel(IBrigadeService brigadeService, IWorkService workService) 
         {
             _brigadeService = brigadeService;
             _workService = workService;
         }
 
         public ObservableCollection<Brigade> Brigades { get; set; } = new();
-        public ObservableCollection<Work> Works { get; set; } = new(); // зачем нью елси можно сослать на лист из сервиса
+        public ObservableCollection<Work> Works { get; set; } = new(); 
 
         [ObservableProperty]
         Brigade selectedBrigade;

@@ -57,6 +57,7 @@ namespace _153505_Savonchik.Persistense.Repository
             params Expression<Func<Work, object>>[]? includesProperties)
         {
             var data = _list.AsQueryable();
+
             return data.Where(filter).ToList();
         }
 

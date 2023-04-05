@@ -13,9 +13,12 @@ namespace _153505_Savonchik.Domain.Entities
         //[Column("Id")]
         //public int WorkId { get; set; }
         //public string Name { get; set; }
+        //[NotNull]
         public int Quality { get; set; } // обязательное свойство
+        //[NotNull]
         public int Duration { get; set; }
         public string Description { get; set; }
+        //[NotNull]
         public int Payment { get; set; }
         //[Indexed]
         public int BrigadeId { get; set; }

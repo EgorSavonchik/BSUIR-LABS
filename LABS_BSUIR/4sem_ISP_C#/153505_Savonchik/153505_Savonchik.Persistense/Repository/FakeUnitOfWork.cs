@@ -17,7 +17,6 @@ namespace _153505_Savonchik.Persistense.Repository
 
         public FakeUnitOfWork(AppDbContext context)
         {
-            //_context = new AppDbContext(new Microsoft.EntityFrameworkCore.DbContextOptions<AppDbContext>());
             _context = context;
             _brigadeRepository = new Lazy<IRepository<Brigade>>(() => new FakeBrigadeRepository());
             _workRepository = new Lazy<IRepository<Work>>(() => new FakeWorkRepository());

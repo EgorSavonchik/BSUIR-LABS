@@ -14,12 +14,17 @@ namespace _153505_Savonchik.ApplicationServices.Services
 
         public Task AddAsync(Work item)
         {
-            return _unitOfWork.WorkRepository.AddAsync(item); // спросить имеет ли это смысл или убрать аваэйт и ретурт и возвращать просто таск
+            return _unitOfWork.WorkRepository.AddAsync(item);
         }
 
-        public Task DeleteAsync(int id)
+        public async Task DeleteAsync(int id)
         {
-            return _unitOfWork.WorkRepository.DeleteAsync(this.GetByIdAsync(id).Result); // имеет ли смысл тут авэйт
+            var work = await this.GetByIdAsync(id);
+
+            if(work != null)
+            {
+                await _unitOfWork.WorkRepository.DeleteAsync(work);
+            }
         }
 
         public Task DeleteAsync(Work item)
@@ -27,9 +32,9 @@ namespace _153505_Savonchik.ApplicationServices.Services
             return _unitOfWork.WorkRepository.DeleteAsync(item);
         }
 
-        public Task<IReadOnlyList<Work>> GetAllAsync()
+        public async Task<IReadOnlyList<Work>> GetAllAsync()
         {
-            return _unitOfWork.WorkRepository.ListAllAsync(); // имеет ли смысл добавлять асинк и авэйт, в вызываемом методе и так дожидаемся выполнения? или нет
+            return await _unitOfWork.WorkRepository.ListAllAsync(); 
         }
 
         public Task<Work> GetByIdAsync(int id)
