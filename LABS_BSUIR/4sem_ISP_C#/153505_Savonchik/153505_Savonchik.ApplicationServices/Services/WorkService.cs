@@ -12,9 +12,10 @@ namespace _153505_Savonchik.ApplicationServices.Services
             _unitOfWork = unitOfWork;
         }
 
-        public Task AddAsync(Work item)
+        public async Task AddAsync(Work item)
         {
-            return _unitOfWork.WorkRepository.AddAsync(item);
+            await _unitOfWork.WorkRepository.AddAsync(item);
+            await _unitOfWork.SaveAllAsync();
         }
 
         public async Task DeleteAsync(int id)
@@ -42,9 +43,11 @@ namespace _153505_Savonchik.ApplicationServices.Services
             return _unitOfWork.WorkRepository.GetByIdAsync(id);
         }
 
-        public Task UpdateAsync(Work item)
+        public async Task UpdateAsync(Work item)
         {
-            return _unitOfWork.WorkRepository.UpdateAsync(item);
+            await _unitOfWork.WorkRepository.UpdateAsync(item);
+
+            await _unitOfWork.SaveAllAsync();
         }
     }
 }

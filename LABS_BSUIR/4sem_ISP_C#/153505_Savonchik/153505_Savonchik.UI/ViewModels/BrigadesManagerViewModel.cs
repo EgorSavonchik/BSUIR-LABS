@@ -1,10 +1,9 @@
 ﻿using _153505_Savonchik.ApplicationServices.Abstractions;
-using _153505_Savonchik.ApplicationServices.Services;
 using _153505_Savonchik.Domain.Entities;
+using _153505_Savonchik.UI.Pages;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 
 namespace _153505_Savonchik.UI.ViewModels
 {
@@ -27,8 +26,22 @@ namespace _153505_Savonchik.UI.ViewModels
 
         [RelayCommand]
         public async void UpdateGroupList() => await GetBrigades();
+
         [RelayCommand]
         public async void UpdateMembersList() => await GetWorks();
+
+        [RelayCommand]
+        public async void ShowDetails(Work work) => await GotoDetailsPage(work);
+
+        private async Task GotoDetailsPage(Work work)
+        {
+            IDictionary<string, object> parameters = new Dictionary<string, object>
+            {
+                { "Work", work }
+            };
+
+            await Shell.Current.GoToAsync(nameof(WorkDetails), parameters);//($"{nameof(WorkDetails)}?Work={work}");
+        }
 
         public async Task GetBrigades()
         {
@@ -51,6 +64,55 @@ namespace _153505_Savonchik.UI.ViewModels
                 foreach (Work work in works)
                     Works.Add(work);
             });
+        }
+
+        [RelayCommand]
+        public async void AddWork() => await GotoAddWork();
+
+        public async Task GotoAddWork()
+        {
+            await Shell.Current.GoToAsync(nameof(AddWork));
+        }
+
+        [RelayCommand]
+        public async void AddBrigade() => await GotoAddBrigade();
+
+        public async Task GotoAddBrigade()
+        {
+            await Shell.Current.GoToAsync(nameof(AddBrigade));
+        }
+
+        public async Task AddBrigadeAsync(Brigade br)
+        {
+            await _brigadeService.AddAsync(br);
+
+            SelectedBrigade ??= new Brigade();
+            
+            UpdateGroupList();
+
+            await Shell.Current.GoToAsync(nameof(BrigadesManager));
+        }
+        
+        public async Task AddWorkAsync(Work work)
+        {
+            await _workService.AddAsync(work);
+
+            SelectedBrigade ??= new Brigade();
+
+            UpdateMembersList();
+
+            await Shell.Current.GoToAsync(nameof(BrigadesManager));
+        }
+
+        public async Task UpdateWorkAsync(Work work)
+        {
+            await _workService.UpdateAsync(work);
+
+            SelectedBrigade ??= new Brigade();
+
+            UpdateMembersList();
+
+            await Shell.Current.GoToAsync(nameof(BrigadesManager));
         }
     }
 }

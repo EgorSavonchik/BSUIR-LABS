@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace _153505_Savonchik.Domain.Entities
 {
@@ -17,10 +18,11 @@ namespace _153505_Savonchik.Domain.Entities
         public int Quality { get; set; } // обязательное свойство
         //[NotNull]
         public int Duration { get; set; }
-        public string Description { get; set; }
+        public string? Description { get; set; }
         //[NotNull]
         public int Payment { get; set; }
         //[Indexed]
         public int BrigadeId { get; set; }
+        public String imagePath { get; set; }
     }
 }

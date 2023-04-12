@@ -6,7 +6,7 @@
     xmlns:local="clr-namespace:_153505_Savonchik.UI"
     xmlns:pages="clr-namespace:_153505_Savonchik.UI.Pages">
 
-    <FlyoutItem Title="ProgressBar">
+    <FlyoutItem Title="Start Page" Icon="icon1.png">
         <Tab>
             <ShellContent
                 Title="Home"
@@ -15,12 +15,12 @@
         </Tab>
     </FlyoutItem>
 
-    <FlyoutItem Title="Brigades list">
+    <FlyoutItem Title="Brigades list" Icon="icon2.png">
         <Tab>
             <ShellContent
                 Title="Brigades list"
                 ContentTemplate="{DataTemplate pages:BrigadesManager}"
                 Route="Brigades" />
         </Tab>
-    </FlyoutItem>
+     </FlyoutItem>
 </Shell>

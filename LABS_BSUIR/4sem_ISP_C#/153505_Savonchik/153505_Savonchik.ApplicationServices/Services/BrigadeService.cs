@@ -19,9 +19,11 @@ namespace _153505_Savonchik.ApplicationServices.Services
             _unitOfWork = unitOfWork;
         }
 
-        public Task AddAsync(Brigade item)
+        public async Task AddAsync(Brigade item)
         {
-            return _unitOfWork.BrigadeRepository.AddAsync(item);
+            await _unitOfWork.BrigadeRepository.AddAsync(item);
+
+            await _unitOfWork.SaveAllAsync();
         }
 
         public async Task AddWorkByBrigade(int brigadeId, Work work)
@@ -47,7 +49,7 @@ namespace _153505_Savonchik.ApplicationServices.Services
 
         public Task<IReadOnlyList<Work>> GetAllWorksByBrigadeAsync(int id)
         {
-            return _unitOfWork.WorkRepository.ListAsync(el => el.Id == id);
+            return _unitOfWork.WorkRepository.ListAsync(el => el.BrigadeId == id);
         }
 
         public Task<Brigade> GetByIdAsync(int id)

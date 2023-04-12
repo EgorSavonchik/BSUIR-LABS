@@ -12,6 +12,6 @@ namespace _153505_Savonchik.Domain.Entities
         //public int Id { get; set; }
         //public string Name { get; set; }
         public int NumberOfWorkers { get; set; }
-        public List<Work> Works { get; set; }
+        public List<Work>? Works { get; set; }
     }
 }

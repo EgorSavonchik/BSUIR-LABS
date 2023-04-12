@@ -1,20 +1,25 @@
 ﻿using _153505_Savonchik.ApplicationServices.Abstractions;
 using _153505_Savonchik.ApplicationServices.Services;
 using _153505_Savonchik.Domain.Abstractions;
+using _153505_Savonchik.Domain.Entities;
 using _153505_Savonchik.Persistense.Data;
 using _153505_Savonchik.Persistense.Repository;
 using _153505_Savonchik.UI.Pages;
 using _153505_Savonchik.UI.ViewModels;
 using CommunityToolkit.Maui;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using System.Reflection;
 
 namespace _153505_Savonchik.UI;
 
 public static class MauiProgram
 {
-	public static MauiApp CreateMauiApp()
+    public static MauiApp CreateMauiApp()
 	{
-		var builder = MauiApp.CreateBuilder();
+		string settingsStream = "_153505_Savonchik.UI.appsettings.json";
+
+        var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
 			.ConfigureFonts(fonts =>
@@ -23,27 +28,96 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-		builder.UseMauiApp<App>().UseMauiCommunityToolkit(); // спросить про странные варнинги
-		SetupServices(builder.Services);
+        var a = Assembly.GetExecutingAssembly(); // получаем сборку, которая содержит выполняемый в текущий момент код.
+        using var stream = a.GetManifestResourceStream(settingsStream); // встраимваем файлик
+        builder.Configuration.AddJsonStream(stream); // спросить зачем встраивать его тут то, если он и так в проекте
 
-		return builder.Build();
+		builder.UseMauiApp<App>().UseMauiCommunityToolkit(); // спросить про странные варнинги
+		SetupServices(builder.Services);   // added services
+        AddDbContext(builder);
+        SeedData(builder.Services);
+
+        return builder.Build();
 	}
 
     private static void SetupServices(IServiceCollection services)
-    {
-		var dataPath = Path.Combine(FileSystem.Current.AppDataDirectory, "Savonchik.db");
-			
+    {		
 		//Services
-		services.AddDbContext<AppDbContext>(opt=>opt.UseSqlite($"Data Source = {dataPath}"));
-		services.AddSingleton<IUnitOfWork, FakeUnitOfWork>();
-        services.AddSingleton<IBrigadeService, BrigadeService>();
-        services.AddSingleton<IWorkService, WorkService>();
+		services.AddScoped<IUnitOfWork, EfUnitOfWork>();
+        services.AddScoped<IBrigadeService, BrigadeService>();
+        services.AddScoped<IWorkService, WorkService>();
 
 		//Pages
-
 		services.AddSingleton<BrigadesManager>();
+        services.AddTransient<WorkDetails>();
+        services.AddSingleton<AddBrigade>();
+        services.AddSingleton<AddWork>();
+        services.AddScoped<EditWork>();
 
         //ViewModels
-        services.AddSingleton<BrigadesManagerViewModel>(); 
+        services.AddSingleton<BrigadesManagerViewModel>();
+        services.AddTransient<WorkDetailsViewModel>();
+        services.AddTransient<WorkEditViewModel>();
+    }
+
+    private static void AddDbContext(MauiAppBuilder builder)
+    {
+        var connStr = builder.Configuration.GetConnectionString("SqliteConnection");
+        string dataDirectory = String.Empty;
+        
+        #if ANDROID
+            dataDirectory = FileSystem.AppDataDirectory+"/";
+        #endif
+        
+        connStr = String.Format(connStr, dataDirectory);
+
+        var options = new DbContextOptionsBuilder<AppDbContext>()
+            .UseSqlite(connStr)
+            .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)
+            .Options;
+
+        builder.Services.AddSingleton<AppDbContext>((s) => new AppDbContext(options));
+    }
+
+    public async static void SeedData(IServiceCollection services)
+    {
+        using var provider = services.BuildServiceProvider();
+        var unitOfWork = provider.GetService<IUnitOfWork>();
+        
+        await unitOfWork.RemoveDatbaseAsync();
+        await unitOfWork.CreateDatabaseAsync();
+        
+        // Add brigades
+        IReadOnlyList<Brigade> brigades = new List<Brigade>()
+        {
+            new Brigade(){ Name="Бригада Савончика", NumberOfWorkers = 3 },
+            new Brigade(){ Name="Бригада Косьмина", NumberOfWorkers = 10 }
+        };
+        
+        foreach (var brigade in brigades)
+            await unitOfWork.BrigadeRepository.AddAsync(brigade);
+        
+        await unitOfWork.SaveAllAsync();
+        
+        //Add works
+        Random rand = new Random();
+
+        int k = 1;
+        foreach (var brigade in brigades)
+            for (int j = 0; j < 10; j++)
+            {
+                await unitOfWork.WorkRepository.AddAsync(new Work()
+                {
+                    Name = $"Work {k++}",
+                    Quality = rand.Next(0, 100) / 10,
+                    BrigadeId = brigade.Id,
+                    Duration = rand.Next(0, 100) * 5,
+                    Description = brigade.Name + " work",
+                    Payment = rand.Next(0, 100) * 10,
+                    imagePath = $"pic{k - 1}.jpg"
+                });
+            }
+
+        await unitOfWork.SaveAllAsync();
     }
 }

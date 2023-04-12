@@ -2,12 +2,9 @@
 using _153505_Savonchik.Domain.Entities;
 using _153505_Savonchik.Persistense.Data;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Diagnostics;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace _153505_Savonchik.Persistense.Repository
 {
@@ -79,6 +76,9 @@ namespace _153505_Savonchik.Persistense.Repository
         public Task UpdateAsync(T entity, CancellationToken cancellationToken = default)
         {
             _context.Entry(entity).State = EntityState.Modified;
+            
+            _context.SaveChanges();
+            _context.Entry(entity).State = EntityState.Detached; // очистить состояние, чтобы прошла следующая операция(точнее следующий сейв чэнджэс)
 
             return Task.CompletedTask;
         }

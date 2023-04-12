@@ -34,7 +34,7 @@ namespace _153505_Savonchik.Persistense.Repository
         }
         public async Task SaveAllAsync()
         {
-            await _context.SaveChangesAsync();
+           await _context.SaveChangesAsync();
         }
     }
 }

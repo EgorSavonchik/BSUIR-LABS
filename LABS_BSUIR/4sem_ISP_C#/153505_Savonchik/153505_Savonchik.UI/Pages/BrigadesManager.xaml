@@ -37,16 +37,34 @@
         </Picker>
 
         <HorizontalStackLayout>
-            <Label Text="Number of workers:    " />
+            <Label Text="Number of works:    " />
             <Label Text = "{Binding SelectedBrigade.NumberOfWorkers}"/>
         </HorizontalStackLayout>
 
-        <CollectionView x:Name="worksView" ItemsSource="{Binding Works}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="ent:Work">
-                    <Label Text= "{Binding Name}" BackgroundColor="{Binding Quality, Converter={StaticResource QualityToColor}}" />
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+        <HorizontalStackLayout>
+            <Button Text="Add brigade" Command="{Binding AddBrigadeCommand}"/>
+            <Button Text="Add work" Command="{Binding AddWorkCommand}"/>
+        </HorizontalStackLayout>
+
+        <ScrollView HeightRequest="400">
+            <CollectionView x:Name="worksView" ItemsSource="{Binding Works}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="ent:Work">
+                        <Frame Margin="5,0" BackgroundColor="{Binding Quality, Converter={StaticResource QualityToColor} }">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source = {RelativeSource AncestorType = {x:Type models:BrigadesManagerViewModel} },
+                                    Path = ShowDetailsCommand}" CommandParameter="{Binding}"/>
+                            </Frame.GestureRecognizers>
+
+                            <HorizontalStackLayout>
+                                <toolkit:AvatarView ImageSource="{Binding imagePath}"></toolkit:AvatarView>
+                                <Label Text= "{Binding Name}"/>
+                            </HorizontalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+        
     </VerticalStackLayout>
 </ContentPage>
