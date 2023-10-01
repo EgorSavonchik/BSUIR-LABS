@@ -1,6 +1,6 @@
-﻿using _153505_Malihtorovich.UI.Pages;
+﻿using _153505_Savonchik.UI.Pages;
 
-namespace _153505_Malihtorovich.UI;
+namespace _153505_Savonchik.UI;
 
 public partial class AppShell : Shell
 {

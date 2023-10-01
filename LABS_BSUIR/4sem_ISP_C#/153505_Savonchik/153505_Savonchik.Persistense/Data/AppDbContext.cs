@@ -1,10 +1,10 @@
-﻿using _153505_Malihtorovich.Domain.Entities;
+﻿using _153505_Savonchik.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 
-namespace _153505_Malihtorovich.Persistense.Data
+namespace _153505_Savonchik.Persistense.Data
 {
     public class AppDbContext : DbContext
     {

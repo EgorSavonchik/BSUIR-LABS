@@ -1,8 +1,8 @@
-﻿using _153505_Malihtorovich.ApplicationServices.Abstractions;
-using _153505_Malihtorovich.Domain.Entities;
+﻿using _153505_Savonchik.ApplicationServices.Abstractions;
+using _153505_Savonchik.Domain.Entities;
 using CommunityToolkit.Mvvm.Input;
 
-namespace _153505_Malihtorovich.UI.ViewModels
+namespace _153505_Savonchik.UI.ViewModels
 {
     public partial class WorkDetailsViewModel : IQueryAttributable
     {

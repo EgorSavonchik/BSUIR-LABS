@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "153505_Malihtorovich.UI", "153505_Savonchik.UI\153505_Malihtorovich.UI.csproj", "{E2A247CA-713B-40E5-8FD9-8BF913F5D0ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "153505_Savonchik.UI", "153505_Savonchik.UI\153505_Savonchik.UI.csproj", "{E2A247CA-713B-40E5-8FD9-8BF913F5D0ED}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "153505_Malihtorovich.Domain", "153505_Savonchik.Domain\153505_Malihtorovich.Domain.csproj", "{04B69E47-BA1B-4185-B3DB-6A3A03C66C72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "153505_Savonchik.Domain", "153505_Savonchik.Domain\153505_Savonchik.Domain.csproj", "{04B69E47-BA1B-4185-B3DB-6A3A03C66C72}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "153505_Malihtorovich.Persistense", "153505_Savonchik.Persistense\153505_Malihtorovich.Persistense.csproj", "{F9382665-F0B5-47B6-803A-DB5488DB1B73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "153505_Savonchik.Persistense", "153505_Savonchik.Persistense\153505_Savonchik.Persistense.csproj", "{F9382665-F0B5-47B6-803A-DB5488DB1B73}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "153505_Malihtorovich.ApplicationServices", "153505_Savonchik.ApplicationServices\153505_Malihtorovich.ApplicationServices.csproj", "{A95DBE2C-0B54-4771-B6AA-BB6C84825E85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "153505_Savonchik.ApplicationServices", "153505_Savonchik.ApplicationServices\153505_Savonchik.ApplicationServices.csproj", "{A95DBE2C-0B54-4771-B6AA-BB6C84825E85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

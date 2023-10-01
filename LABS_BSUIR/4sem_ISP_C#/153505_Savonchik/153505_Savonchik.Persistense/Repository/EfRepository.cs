@@ -1,12 +1,12 @@
-﻿using _153505_Malihtorovich.Domain.Abstractions;
-using _153505_Malihtorovich.Domain.Entities;
-using _153505_Malihtorovich.Persistense.Data;
+﻿using _153505_Savonchik.Domain.Abstractions;
+using _153505_Savonchik.Domain.Entities;
+using _153505_Savonchik.Persistense.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using System.Linq.Expressions;
 
 
-namespace _153505_Malihtorovich.Persistense.Repository
+namespace _153505_Savonchik.Persistense.Repository
 {
     public class EfRepository<T> : IRepository<T> where T : Entity
     {

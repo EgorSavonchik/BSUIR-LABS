@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace _153505_Malihtorovich.UI.ValueConverters
+namespace _153505_Savonchik.UI.ValueConverters
 {
     public class QualityToColorValueConverter : IValueConverter
     {

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 
-namespace _153505_Malihtorovich.Domain.Entities
+namespace _153505_Savonchik.Domain.Entities
 {
     public abstract class Entity
     {

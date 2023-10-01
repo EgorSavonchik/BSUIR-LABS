@@ -1,6 +1,6 @@
-﻿using _153505_Malihtorovich.ApplicationServices.Abstractions;
-using _153505_Malihtorovich.Domain.Abstractions;
-using _153505_Malihtorovich.Domain.Entities;
+﻿using _153505_Savonchik.ApplicationServices.Abstractions;
+using _153505_Savonchik.Domain.Abstractions;
+using _153505_Savonchik.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _153505_Malihtorovich.ApplicationServices.Services
+namespace _153505_Savonchik.ApplicationServices.Services
 {
     public class BrigadeService : IBrigadeService
     {

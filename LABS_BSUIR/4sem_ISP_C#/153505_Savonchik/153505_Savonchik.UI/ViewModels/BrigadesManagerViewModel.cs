@@ -1,11 +1,11 @@
-﻿using _153505_Malihtorovich.ApplicationServices.Abstractions;
-using _153505_Malihtorovich.Domain.Entities;
-using _153505_Malihtorovich.UI.Pages;
+﻿using _153505_Savonchik.ApplicationServices.Abstractions;
+using _153505_Savonchik.Domain.Entities;
+using _153505_Savonchik.UI.Pages;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 
-namespace _153505_Malihtorovich.UI.ViewModels
+namespace _153505_Savonchik.UI.ViewModels
 {
     public partial class BrigadesManagerViewModel : ObservableObject
     {

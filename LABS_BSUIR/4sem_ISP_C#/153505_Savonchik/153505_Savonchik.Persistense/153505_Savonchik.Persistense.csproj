@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>_153505_Malihtorovich.Persistense</RootNamespace>
+    <RootNamespace>_153505_Savonchik.Persistense</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\153505_Savonchik.Domain\153505_Malihtorovich.Domain.csproj" />
+    <ProjectReference Include="..\153505_Savonchik.Domain\153505_Savonchik.Domain.csproj" />
   </ItemGroup>
 
 </Project>

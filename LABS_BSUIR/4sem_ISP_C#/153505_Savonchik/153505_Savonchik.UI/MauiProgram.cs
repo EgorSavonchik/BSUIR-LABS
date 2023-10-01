@@ -1,23 +1,23 @@
-﻿using _153505_Malihtorovich.ApplicationServices.Abstractions;
-using _153505_Malihtorovich.ApplicationServices.Services;
-using _153505_Malihtorovich.Domain.Abstractions;
-using _153505_Malihtorovich.Domain.Entities;
-using _153505_Malihtorovich.Persistense.Data;
-using _153505_Malihtorovich.Persistense.Repository;
-using _153505_Malihtorovich.UI.Pages;
-using _153505_Malihtorovich.UI.ViewModels;
+﻿using _153505_Savonchik.ApplicationServices.Abstractions;
+using _153505_Savonchik.ApplicationServices.Services;
+using _153505_Savonchik.Domain.Abstractions;
+using _153505_Savonchik.Domain.Entities;
+using _153505_Savonchik.Persistense.Data;
+using _153505_Savonchik.Persistense.Repository;
+using _153505_Savonchik.UI.Pages;
+using _153505_Savonchik.UI.ViewModels;
 using CommunityToolkit.Maui;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System.Reflection;
 
-namespace _153505_Malihtorovich.UI;
+namespace _153505_Savonchik.UI;
 
 public static class MauiProgram
 {
     public static MauiApp CreateMauiApp()
 	{
-		string settingsStream = "_153505_Malihtorovich.UI.appsettings.json";
+		string settingsStream = "_153505_Savonchik.UI.appsettings.json";
 
         var builder = MauiApp.CreateBuilder();
 		builder

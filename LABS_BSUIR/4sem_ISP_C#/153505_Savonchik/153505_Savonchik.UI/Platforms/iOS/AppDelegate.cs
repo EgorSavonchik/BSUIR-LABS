@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace _153505_Malihtorovich.UI;
+namespace _153505_Savonchik.UI;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate
