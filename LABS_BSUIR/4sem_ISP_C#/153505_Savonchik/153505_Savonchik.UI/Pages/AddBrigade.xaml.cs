@@ -1,7 +1,7 @@
-using _153505_Savonchik.Domain.Entities;
-using _153505_Savonchik.UI.ViewModels;
+using _153505_Malihtorovich.Domain.Entities;
+using _153505_Malihtorovich.UI.ViewModels;
 
-namespace _153505_Savonchik.UI.Pages;
+namespace _153505_Malihtorovich.UI.Pages;
 
 public partial class AddBrigade : ContentPage
 {

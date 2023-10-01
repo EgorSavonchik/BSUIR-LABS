@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="_153505_Savonchik.UI.Pages.WorkDetails"
-             xmlns:models="clr-namespace:_153505_Savonchik.UI.ViewModels"
+             x:Class="_153505_Malihtorovich.UI.Pages.WorkDetails"
+             xmlns:models="clr-namespace:_153505_Malihtorovich.UI.ViewModels"
              x:DataType="models:WorkDetailsViewModel"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              BindingContext = "WorkDetailsViewModel"
-             xmlns:ent="clr-namespace:_153505_Savonchik.Domain.Entities;assembly=153505_Savonchik.Domain"
+             xmlns:ent="clr-namespace:_153505_Malihtorovich.Domain.Entities;assembly=153505_Malihtorovich.Domain"
              Loaded="OnLoadPage"
              Title="WorkDetails">
 

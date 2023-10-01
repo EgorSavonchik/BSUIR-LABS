@@ -1,0 +1,71 @@
+﻿@page
+@model WEB_153501_Savonchik.Areas.TelephoneAdmin.Pages.IndexModel
+
+@{
+    //Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+    </head>
+    <body>
+        <p>
+            <a class="btn btn-primary" asp-page="Create"  data-toggle="modal"><i class="fa fa-plus"></i>Create New</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Telephone[0].Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Telephone[0].Description)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Telephone[0].FirmId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Telephone[0].Price)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Telephone[0].ImageSource)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Telephone[0].Mime)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model.Telephone) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FirmId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        <img src="@Url.Content($"{item.ImageSource}{item.Mime}")" alt="Изображение" height="100" width="100"/>
+                    </td>
+                    <td>
+                        <a class="btn btn-success" asp-page="./Edit" asp-route-id="@item.Id"><i class="fas fa-edit"></i>Edit</a> |
+                        <a class="btn btn-info" asp-page="./Details" asp-route-id="@item.Id"><i class="fa-solid fa-info"></i>Details</a> |
+                        <a class="btn btn-danger" asp-page="./Delete" asp-route-id="@item.Id"><i class="fa-solid fa-trash"></i>Delete</a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </body>
+</html>

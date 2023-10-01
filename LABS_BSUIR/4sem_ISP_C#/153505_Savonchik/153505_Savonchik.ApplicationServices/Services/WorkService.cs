@@ -1,8 +1,8 @@
-﻿using _153505_Savonchik.ApplicationServices.Abstractions;
-using _153505_Savonchik.Domain.Abstractions;
-using _153505_Savonchik.Domain.Entities;
+﻿using _153505_Malihtorovich.ApplicationServices.Abstractions;
+using _153505_Malihtorovich.Domain.Abstractions;
+using _153505_Malihtorovich.Domain.Entities;
 
-namespace _153505_Savonchik.ApplicationServices.Services
+namespace _153505_Malihtorovich.ApplicationServices.Services
 {
     public class WorkService : IWorkService
     {

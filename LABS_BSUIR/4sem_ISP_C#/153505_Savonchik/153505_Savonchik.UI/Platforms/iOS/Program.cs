@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace _153505_Savonchik.UI;
+namespace _153505_Malihtorovich.UI;
 
 public class Program
 {

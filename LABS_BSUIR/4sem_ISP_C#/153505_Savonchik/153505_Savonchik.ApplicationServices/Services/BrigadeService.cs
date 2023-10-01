@@ -1,6 +1,6 @@
-﻿using _153505_Savonchik.ApplicationServices.Abstractions;
-using _153505_Savonchik.Domain.Abstractions;
-using _153505_Savonchik.Domain.Entities;
+﻿using _153505_Malihtorovich.ApplicationServices.Abstractions;
+using _153505_Malihtorovich.Domain.Abstractions;
+using _153505_Malihtorovich.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _153505_Savonchik.ApplicationServices.Services
+namespace _153505_Malihtorovich.ApplicationServices.Services
 {
     public class BrigadeService : IBrigadeService
     {
@@ -30,11 +30,15 @@ namespace _153505_Savonchik.ApplicationServices.Services
         {
             var brigade = await _unitOfWork.BrigadeRepository.GetByIdAsync(brigadeId);
             brigade.Works.Add(work);
+
+            await _unitOfWork.SaveAllAsync();
         }
 
-        public Task DeleteAsync(int id)
+        public async Task DeleteAsync(int id)
         {
-            return _unitOfWork.BrigadeRepository.DeleteAsync(this.GetByIdAsync(id).Result);
+            _unitOfWork.BrigadeRepository.DeleteAsync(this.GetByIdAsync(id).Result);
+
+            await _unitOfWork.SaveAllAsync();
         }
 
         public Task DeleteAsync(Brigade item)
@@ -57,9 +61,11 @@ namespace _153505_Savonchik.ApplicationServices.Services
             return _unitOfWork.BrigadeRepository.GetByIdAsync(id);
         }
 
-        public Task UpdateAsync(Brigade item)
+        public async Task UpdateAsync(Brigade item)
         {
-            return _unitOfWork.BrigadeRepository.UpdateAsync(item);
+            await _unitOfWork.BrigadeRepository.UpdateAsync(item);
+
+            await _unitOfWork.SaveAllAsync();
         }
     }
 }

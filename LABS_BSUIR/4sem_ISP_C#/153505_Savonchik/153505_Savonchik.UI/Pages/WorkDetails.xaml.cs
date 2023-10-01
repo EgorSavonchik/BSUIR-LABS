@@ -1,6 +1,6 @@
-using _153505_Savonchik.UI.ViewModels;
+using _153505_Malihtorovich.UI.ViewModels;
 
-namespace _153505_Savonchik.UI.Pages;
+namespace _153505_Malihtorovich.UI.Pages;
 
 
 
@@ -19,7 +19,7 @@ public partial class WorkDetails : ContentPage
         this.desriptionLabel.Text = "Description: " + ((WorkDetailsViewModel)BindingContext).SelectedWork.Description;
         this.paymentLabel.Text = "Payment: " + ((WorkDetailsViewModel)BindingContext).SelectedWork.Payment.ToString();
         this.qualityLabel.Text = "Quality: " + ((WorkDetailsViewModel)BindingContext).SelectedWork.Quality.ToString();
-        this.image.Source = ((WorkDetailsViewModel)BindingContext).SelectedWork.imagePath; //ImageSource.FromFile(((WorkDetailsViewModel)BindingContext).SelectedWork.imagePath);
+        this.image.Source = ((WorkDetailsViewModel)BindingContext).SelectedWork.ImagePath; //ImageSource.FromFile(((WorkDetailsViewModel)BindingContext).SelectedWork.imagePath);
         this.durationLabel.Text = ((WorkDetailsViewModel)BindingContext).SelectedWork.Duration.ToString();
     }
 }

@@ -9,6 +9,6 @@ namespace lab_1.Services
 {
     public interface IRateService
     {
-        IEnumerable<Rate> GetRates(DateTime date);
+        ValueTask<IEnumerable<Rate>> GetRates(DateTime date);
     }
 }

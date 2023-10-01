@@ -1,13 +1,13 @@
-﻿using _153505_Savonchik.Domain.Abstractions;
-using _153505_Savonchik.Domain.Entities;
-using _153505_Savonchik.Persistense.Data;
+﻿using _153505_Malihtorovich.Domain.Abstractions;
+using _153505_Malihtorovich.Domain.Entities;
+using _153505_Malihtorovich.Persistense.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _153505_Savonchik.Persistense.Repository
+namespace _153505_Malihtorovich.Persistense.Repository
 {
     public class FakeUnitOfWork : IUnitOfWork
     {

@@ -1,0 +1,55 @@
+﻿
+@{
+    @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
+        <!--<link rel="stylesheet" href="~/WebLabs_BSUIR_V02.styles.css" asp-append-version="true" /> -->
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                    <!-- меню сайта -->
+                    <partial name="_MenuPartial" />
+                    <!-- меню сайта - конец -->
+                    <!-- Информация пользователя -->
+                    <partial name="_UserInfoPartial" />
+                    <!-- Информация пользователя - конец -->
+                </nav> <!-- Панель навигации - конец -->
+            </div><!-- container - конец -->
+        </header><!-- header - конец -->
+        <main class="container">
+            @RenderBody()
+        </main>
+        <footer>
+            <div class="container">
+                <div class="navbar navbar-dark navbar-expand-md bg-dark">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-item nav-link" href="http://www.facebook.com">
+                            <i class="fa-brands fa-facebook-f fa-2x"></i>
+                        </a>
+                        <a class="nav-item nav-link" href="http://www.vk.com">
+                            <i class="fa-brands fa-vk fa-2x"></i>
+                        </a>
+                        <a class="nav-item nav-link" href="http://www.twitter.com">
+                            <i class="fa-brands fa-twitter fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)
+    </body>
+</html>

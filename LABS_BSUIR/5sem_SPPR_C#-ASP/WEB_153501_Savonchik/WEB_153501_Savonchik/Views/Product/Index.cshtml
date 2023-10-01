@@ -1,0 +1,80 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    
+    @model (ListModel<Telephone> telephones, List<Firm> firms)
+}
+
+
+
+<div>
+	<h2>Список товаров</h2>
+    <!-- выбор категории -->
+    <div class="col-2 border-2">
+        <ul class="nav ">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                    aria-expanded="false">@ViewData["currentFirm"]
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" asp-controller="product" asp-route-firm=@null>Все</a>
+                    </li>
+                    @foreach (var item in Model.firms)
+                    {
+                        <li>
+                            <a class="dropdown-item" asp-controller="product" asp-route-firm="@item.NormalizedName">
+                                @item.Name
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </li>
+        </ul>
+    </div><!-- выбор категории -->
+    <fieldset class="row mb-3">
+        <div class="col-sm-10 offset-sm-2 row">
+			@foreach (var item in Model.telephones.Items.ToList())
+			{
+				<div class="card mt-3 col-md-5 mx-3" style="width: 18rem;">
+					<img src="@String.Format(@item.ImageSource + @item.Mime)" 
+                    class="card-img-top" alt="..." style="height: 200px; object-fit: contain;"/> 
+					<div class="card-body">
+						<h5 class="card-title">@item.Name</h5>
+						<p class="card-text">@item.Description</p>
+						<a href="#" class="btn btn-primary">Go somewhere</a>
+					</div>
+				</div>
+			}
+        </div>
+    </fieldset>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" asp-route-firm="@(ViewData["normalizedFirmName"] != null 
+                        ? ViewData["normalizedFirmName"] : string.Empty)" asp-route-pageNo="1" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            @for (int i = Convert.ToInt32(ViewData["startPage"]); i <= Convert.ToInt32(ViewData["endPage"]); i++)
+            {
+                <li class="page-item @(Model.telephones.CurrentPage == i?"active":"")">
+                    <a class="page-link" asp-route-firm="@(ViewData["normalizedFirmName"] != null 
+                            ? ViewData["normalizedFirmName"] : string.Empty)" asp-route-pageNo="@i">
+                        @i
+                    </a>
+                </li>
+            }
+            <li class="page-item">
+                <a class="page-link" asp-route-firm="@(ViewData["normalizedFirmName"] != null 
+                        ? ViewData["normalizedFirmName"] : string.Empty)" asp-route-pageNo="@Model.telephones.TotalPages" 
+                        aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+       

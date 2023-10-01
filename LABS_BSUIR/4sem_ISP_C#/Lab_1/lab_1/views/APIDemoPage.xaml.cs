@@ -17,9 +17,9 @@ public partial class APIDemoPage : ContentPage
 		InitializeComponent();
 	}
 
-	public void OnLoadedPage(object sender, EventArgs e)
+	public async void OnLoadedPage(object sender, EventArgs e)
 	{
-		rates = rateService.GetRates(dateTime).ToList();
+		rates = (await rateService.GetRates(dateTime)).ToList();
 
         this.TransferPicker.ItemsSource = rates.Select(o => o.Cur_Name).ToList();
         this.TransferPicker.ItemsSource = this.TransferPicker.GetItemsAsArray();
@@ -42,11 +42,11 @@ public partial class APIDemoPage : ContentPage
 			/ rates[this.ReverseTransferPicker.SelectedIndex].Cur_Scale).Value, 5).ToString();
     }
 
-	public void OnDateSelected(object sender, EventArgs e) 
+	public async void OnDateSelected(object sender, EventArgs e) 
 	{
 		dateTime = this.Calendar.Date;
 
-        rates = rateService.GetRates(dateTime).ToList();
+        rates = (await rateService.GetRates(dateTime)).ToList();
 
         this.TransferPicker.ItemsSource = rates.Select(o => o.Cur_Name).ToList();
         this.TransferPicker.ItemsSource = this.TransferPicker.GetItemsAsArray();

@@ -1,23 +1,23 @@
-﻿using _153505_Savonchik.ApplicationServices.Abstractions;
-using _153505_Savonchik.ApplicationServices.Services;
-using _153505_Savonchik.Domain.Abstractions;
-using _153505_Savonchik.Domain.Entities;
-using _153505_Savonchik.Persistense.Data;
-using _153505_Savonchik.Persistense.Repository;
-using _153505_Savonchik.UI.Pages;
-using _153505_Savonchik.UI.ViewModels;
+﻿using _153505_Malihtorovich.ApplicationServices.Abstractions;
+using _153505_Malihtorovich.ApplicationServices.Services;
+using _153505_Malihtorovich.Domain.Abstractions;
+using _153505_Malihtorovich.Domain.Entities;
+using _153505_Malihtorovich.Persistense.Data;
+using _153505_Malihtorovich.Persistense.Repository;
+using _153505_Malihtorovich.UI.Pages;
+using _153505_Malihtorovich.UI.ViewModels;
 using CommunityToolkit.Maui;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System.Reflection;
 
-namespace _153505_Savonchik.UI;
+namespace _153505_Malihtorovich.UI;
 
 public static class MauiProgram
 {
     public static MauiApp CreateMauiApp()
 	{
-		string settingsStream = "_153505_Savonchik.UI.appsettings.json";
+		string settingsStream = "_153505_Malihtorovich.UI.appsettings.json";
 
         var builder = MauiApp.CreateBuilder();
 		builder
@@ -52,7 +52,7 @@ public static class MauiProgram
         services.AddTransient<WorkDetails>();
         services.AddSingleton<AddBrigade>();
         services.AddSingleton<AddWork>();
-        services.AddScoped<EditWork>();
+        services.AddTransient<EditWork>();
 
         //ViewModels
         services.AddSingleton<BrigadesManagerViewModel>();
@@ -73,7 +73,7 @@ public static class MauiProgram
 
         var options = new DbContextOptionsBuilder<AppDbContext>()
             .UseSqlite(connStr)
-            .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)
+            //.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking) //
             .Options;
 
         builder.Services.AddSingleton<AppDbContext>((s) => new AppDbContext(options));
@@ -90,8 +90,9 @@ public static class MauiProgram
         // Add brigades
         IReadOnlyList<Brigade> brigades = new List<Brigade>()
         {
-            new Brigade(){ Name="Бригада Савончика", NumberOfWorkers = 3 },
-            new Brigade(){ Name="Бригада Косьмина", NumberOfWorkers = 10 }
+            new Brigade(){ Name="Бригада 1", NumberOfWorkers = 3 },
+            new Brigade(){ Name="Бригада 2", NumberOfWorkers = 15 },
+            new Brigade(){ Name="Бригада 3", NumberOfWorkers = 10 }
         };
         
         foreach (var brigade in brigades)
@@ -114,7 +115,7 @@ public static class MauiProgram
                     Duration = rand.Next(0, 100) * 5,
                     Description = brigade.Name + " work",
                     Payment = rand.Next(0, 100) * 10,
-                    imagePath = $"pic{k - 1}.jpg"
+                    ImagePath = $"pic{k - 1}.jpg"
                 });
             }
 

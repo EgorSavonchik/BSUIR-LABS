@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "WEB_153501_Savonchik.Domain": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:57128;http://localhost:57129"
+    }
+  }
+}

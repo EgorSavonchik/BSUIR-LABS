@@ -1,7 +1,7 @@
-using _153505_Savonchik.Domain.Entities;
-using _153505_Savonchik.UI.ViewModels;
+using _153505_Malihtorovich.Domain.Entities;
+using _153505_Malihtorovich.UI.ViewModels;
 
-namespace _153505_Savonchik.UI.Pages;
+namespace _153505_Malihtorovich.UI.Pages;
 
 public partial class AddWork : ContentPage
 {
@@ -23,7 +23,7 @@ public partial class AddWork : ContentPage
         work.Duration = Convert.ToInt32(this.durationEntry.Text);
 		work.Description = this.descriptionEntry.Text;
 		work.Payment = Convert.ToInt32(this.paymentEntry.Text);
-		work.imagePath = "blank.png";
+		work.ImagePath = "blank.png";
 
 		try
 		{

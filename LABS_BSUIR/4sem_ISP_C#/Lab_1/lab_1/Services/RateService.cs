@@ -18,13 +18,13 @@ namespace lab_1.Services
             this.httpClient = httpClient;
         }
 
-        public IEnumerable<Rate> GetRates(DateTime date)
+        public async ValueTask<IEnumerable<Rate>> GetRates(DateTime date)
         {
             IEnumerable<Rate> result = new List<Rate>();
 
             Uri uri = new Uri("https://www.nbrb.by/api/exrates/rates" + "?ondate=" + date.ToString("yyyy-MM-dd") + "&periodicity=0");
 
-            HttpResponseMessage response = httpClient.GetAsync(uri).Result;
+            HttpResponseMessage response = await httpClient.GetAsync(uri);
 
             if (response.IsSuccessStatusCode)
             {

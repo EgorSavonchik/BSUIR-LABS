@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _153505_Savonchik.Domain.Entities
+
+namespace _153505_Malihtorovich.Domain.Entities
 {
     public abstract class Entity
     {

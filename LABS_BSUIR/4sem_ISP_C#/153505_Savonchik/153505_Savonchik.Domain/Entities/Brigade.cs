@@ -3,7 +3,7 @@
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System.Runtime.CompilerServices;
 
-namespace _153505_Savonchik.Domain.Entities
+namespace _153505_Malihtorovich.Domain.Entities
 {
     //[Table("Brigades")]
     public class Brigade : Entity

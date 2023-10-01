@@ -1,0 +1,10 @@
+logic\models\Video.class
+logic\services\UserService.class
+logic\models\Role.class
+logic\services\VideoService.class
+logic\models\Comment.class
+logic\services\CommentService.class
+logic\models\User.class
+logic\repositories\CommentsRepository.class
+logic\repositories\UserRepository.class
+logic\repositories\VideoRepository.class

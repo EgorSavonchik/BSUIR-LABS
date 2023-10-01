@@ -1,20 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
+﻿
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace _153505_Savonchik.Domain.Entities
+namespace _153505_Malihtorovich.Domain.Entities
 {
-    //[Table("Works")]
     public class Work : Entity
     {
-        //[PrimaryKey, AutoIncrement, Indexed]
-        //[Column("Id")]
-        //public int WorkId { get; set; }
-        //public string Name { get; set; }
-        //[NotNull]
+
         public int Quality { get; set; } // обязательное свойство
         //[NotNull]
         public int Duration { get; set; }
@@ -22,7 +14,8 @@ namespace _153505_Savonchik.Domain.Entities
         //[NotNull]
         public int Payment { get; set; }
         //[Indexed]
+        [ForeignKey(nameof(Id))]
         public int BrigadeId { get; set; }
-        public String imagePath { get; set; }
+        public string? ImagePath { get; set; }
     }
 }
