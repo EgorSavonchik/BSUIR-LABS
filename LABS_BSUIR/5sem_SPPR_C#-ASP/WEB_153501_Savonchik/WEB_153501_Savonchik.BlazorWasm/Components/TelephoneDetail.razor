@@ -1,0 +1,40 @@
+﻿@using WEB_153501_Savonchik.Domain.Entities;
+
+<style>
+	.Telephone-details-container {
+		display: flex;
+		align-items: center;
+	}
+
+	.Telephone-image {
+		flex: 0 0 auto;
+		margin-right: 20px;
+	}
+
+	.Telephone-info {
+		flex: 1 1 auto;
+	}
+</style>
+
+
+@if (SelectedTelephone is not null)
+{
+		<div class="Telephone-details-container">
+			<div class="Telephone-image">
+			@if (!string.IsNullOrEmpty(SelectedTelephone.ImageSource))
+			{
+						<img src="@String.Format(@SelectedTelephone.ImageSource + @SelectedTelephone.Mime)" alt="Telephone Image" width="400" height="300"/>
+			}
+			</div>
+			<div class="Telephone-info">
+				<h2>@SelectedTelephone.Name</h2>
+				<p>@SelectedTelephone.Description</p>
+				<p>Price: @SelectedTelephone.Price</p>
+			</div>
+		</div>
+}
+
+@code {
+	[Parameter]
+	public Telephone? SelectedTelephone { get; set; }
+}

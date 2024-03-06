@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.23" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.22" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.22">
@@ -25,6 +26,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WEB_153501_Savonchik.Domain\WEB_153501_Savonchik.Domain.csproj" />
+    <ProjectReference Include="..\WEB_153501_Savonchik\WEB_153501_Savonchik.csproj" />
   </ItemGroup>
 
 </Project>

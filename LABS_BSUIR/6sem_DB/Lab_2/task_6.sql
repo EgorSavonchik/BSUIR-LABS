@@ -1,0 +1,35 @@
+CREATE OR REPLACE TRIGGER Group_C_Val_Students_Update
+AFTER UPDATE ON STUDENTS
+FOR EACH ROW
+BEGIN
+  IF (:OLD.GROUP_ID != :NEW.GROUP_ID) THEN
+    UPDATE GROUPS SET c_val = c_val - 1 WHERE id = :OLD.GROUP_ID;
+    UPDATE GROUPS SET c_val = c_val + 1 WHERE id = :NEW.GROUP_ID;
+  END IF;
+END;
+
+
+CREATE OR REPLACE TRIGGER Group_C_Val_Students_Insert
+AFTER INSERT ON STUDENTS
+FOR EACH ROW
+BEGIN
+  UPDATE GROUPS SET c_val = c_val + 1 WHERE id = :NEW.GROUP_ID;
+END;
+
+
+CREATE OR REPLACE TRIGGER Group_C_Val_Students_Delete
+BEFORE DELETE ON STUDENTS
+FOR EACH ROW
+DECLARE
+    v_count NUMBER;
+BEGIN
+    SELECT COUNT(*) INTO v_count FROM groups WHERE id = :OLD.GROUP_ID;
+    
+    IF v_count > 0 THEN
+       UPDATE GROUPS SET c_val = c_val - 1 WHERE id = :OLD.GROUP_ID;    
+    END IF;
+    
+    EXCEPTION
+    WHEN OTHERS THEN
+                NULL;
+END;

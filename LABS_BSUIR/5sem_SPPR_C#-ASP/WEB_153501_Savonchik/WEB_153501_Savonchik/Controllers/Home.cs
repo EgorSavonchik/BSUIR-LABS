@@ -16,7 +16,7 @@ namespace WEB_153501_Savonchik.Controllers
                 new ListDemo { Id = 3, Name = "Элемент 3" }
             };
 
-            ViewData["labVersionMessage"] = "Лабораторная работа #2";
+            ViewData["labVersionMessage"] = "Лабораторная работа #10";
 
             return View(listDemo);
         }

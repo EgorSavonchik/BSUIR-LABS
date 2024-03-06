@@ -14,11 +14,12 @@ namespace WEB_153501_Savonchik.API.Services.FirmService
             _appDbContext = appDbContext;
         }
 
-        public async Task<ResponseData<List<Firm>>> GetCategoryListAsync()
+        public async Task<ResponseData<List<Firm>>> GetFirmListAsync()
         {
             return new ResponseData<List<Firm>>
             {
-                Data = await _appDbContext.Firms.ToListAsync()
+                Data = await _appDbContext.Firms.ToListAsync(),
+                Success = true
             };
         }
     }

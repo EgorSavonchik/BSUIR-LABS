@@ -7,7 +7,7 @@ namespace WEB_153501_Savonchik.API.Services.TelephoneService
 {
     public class TelephoneService : ITelephoneService
     {
-        private readonly int _maxPageSize = 20;
+        public readonly int _maxPageSize = 10;
         private readonly AppDbContext _context;
         private readonly IWebHostEnvironment _environment;
         private readonly IHttpContextAccessor _httpContextAccessor;

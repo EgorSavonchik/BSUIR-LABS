@@ -9,6 +9,6 @@ namespace WEB_153501_Savonchik.API.Services.FirmService
         /// Получение списка всех фирм
         /// </summary>
         /// <returns></returns>
-        public Task<ResponseData<List<Firm>>> GetCategoryListAsync();
+        public Task<ResponseData<List<Firm>>> GetFirmListAsync();
     }
 }

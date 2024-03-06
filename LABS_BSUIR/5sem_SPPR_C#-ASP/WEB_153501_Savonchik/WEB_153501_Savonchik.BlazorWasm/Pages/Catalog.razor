@@ -1,0 +1,39 @@
+﻿@page "/catalog"
+@page "/catalog/{category}"
+@attribute [Authorize]
+@using BlazorWasm.Components
+@using Domain.Entities;
+@using Microsoft.AspNetCore.Authorization;
+
+<PageTitle>Telephone</PageTitle>
+<CategorySelector SelectedCategory="@SelectedName" />
+<TelephoneList TelephoneSelected="FindTelephone" />
+<Pager Category="@Category" TotalPages="@DataService.TotalPages" CurrentPage="@DataService.CurrentPage" />
+<TelephoneDetails SelectedTelephone="@SelectedTelephone"/>
+
+@code {
+	[Inject]
+	public IDataService DataService { get; set; }
+	[Parameter] public string Category { get; set; }
+	public string? SelectedName { get; set; }
+	public Telephone? SelectedTelephone { get; set; }
+
+	protected override async Task OnParametersSetAsync()
+	{
+		await DataService.GetTelephoneListAsync(Category);
+		if (Category != null)
+			SelectedName = DataService?.Categories?.FirstOrDefault(c => c.NormalizedName.Equals(Category))?.Name;
+		else SelectedName = "Все";
+	}
+
+
+	[Inject]
+	ILogger<Catalog> Logger { get; set; }
+
+	public void FindTelephone(int id)
+	{
+		SelectedTelephone = DataService?.TelephoneList?.FirstOrDefault(c => c.Id == id);
+		Logger.LogInformation($"<------ FindTelephone called ------> ({SelectedTelephone?.Name})");
+		StateHasChanged();
+	}
+}

@@ -222,4 +222,84 @@ public class AppTest extends TestCase
         Triangle triangle = new Triangle(parameterA, parameterB, parameterC);
         assertEquals(triangle.detectTriangle(), 4);
     }
+
+    public void testDetectTriangle_Rectangular_Ordinary_tst(){
+        parameterA = 3;
+        parameterB = 4;
+        parameterC = 5;
+        Triangle triangle = new Triangle(parameterA, parameterB, parameterC);
+        assertEquals(triangle.detectTriangle(), 8);
+    }
+
+    public void testCheckTriangle_MaxValue_tst(){
+        parameterA = Double.MAX_VALUE;
+        parameterB = Double.MAX_VALUE;
+        parameterC = Double.MAX_VALUE;
+        Triangle triangle = new Triangle(parameterA, parameterB, parameterC);
+        assertTrue(triangle.checkTriangle());
+    }
+
+    public void testCheckTriangle_NaN_tst(){
+        parameterA = 0.0/0.0;
+        parameterB = 1.0/0.0;
+        parameterC = 0.0/0.0;
+        Triangle triangle = new Triangle(parameterA, parameterB, parameterC);
+        assertFalse(triangle.checkTriangle());
+    }
+
+    public void testCheckTriangle_All_Negative_Sides_tst(){
+        parameterA = -1;
+        parameterB = -1;
+        parameterC = -1;
+        Triangle triangle = new Triangle(parameterA, parameterB, parameterC);
+        assertFalse(triangle.checkTriangle());
+    }
+
+    public void testDetectTriangle_IsoscelesAndRectangular_tst(){
+        parameterA = 4;
+        parameterB = 4;
+        parameterC = 4*Math.sqrt(2);
+        Triangle triangle = new Triangle(parameterA, parameterB, parameterC);
+        assertEquals(triangle.detectTriangle(), 10);
+    }
+
+    public void testGetSquare_Equilateral_tst(){
+        parameterA = 4;
+        parameterB = 4;
+        parameterC = 4;
+        Triangle triangle = new Triangle(parameterA, parameterB, parameterC);
+        assertEquals(triangle.getSquare(), 6.9282032302755091741097853660235);
+    }
+
+    public void testGetSquare_Rectangular_tst(){
+        parameterA = 4*Math.sqrt(2);
+        parameterB = 4*Math.sqrt(2);
+        parameterC = 8;
+        Triangle triangle = new Triangle(parameterA, parameterB, parameterC);
+        assertEquals(Math.round(triangle.getSquare()), 16);
+    }
+
+    public void testGetSquare_Ordinary_tst(){
+        parameterA = 3;
+        parameterB = 4;
+        parameterC = 2;
+        Triangle triangle = new Triangle(parameterA, parameterB, parameterC);
+        assertEquals(triangle.getSquare(), 2.9047375096555625);
+    }
+
+    public void testGetSquare_ZeroArea_tst(){
+        parameterA = 3;
+        parameterB = 1;
+        parameterC = 2;
+        Triangle triangle = new Triangle(parameterA, parameterB, parameterC);
+        assertEquals(triangle.getSquare(), 0.0);
+    }
+
+    public void testGetSquare_IncorrectTriangle_tst(){
+        parameterA = 5;
+        parameterB = 1;
+        parameterC = 2;
+        Triangle triangle = new Triangle(parameterA, parameterB, parameterC);
+        assertEquals(triangle.getSquare(), 0.0/0.0);
+    }
 }

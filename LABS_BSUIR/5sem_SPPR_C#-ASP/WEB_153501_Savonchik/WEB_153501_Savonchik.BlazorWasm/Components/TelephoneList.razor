@@ -1,0 +1,46 @@
+﻿@inject IDataService DataService
+@implements IDisposable
+
+
+<h1>Одежда</h1>
+
+@if (DataService.TelephoneList is null || !DataService.Success)
+{
+	<p><em>Loading...</em></p>
+}
+else
+{
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var cl in DataService.TelephoneList!)
+			{
+				<tr>
+					<td>@cl.Name</td>
+					<td> <button class="btn btn-primary" @onclick="() => TelephoneSelected.Invoke(cl.Id)">Подробнее</button></td>
+				</tr>
+			}
+		</tbody>
+	</table>
+}
+
+
+
+@code {
+	protected override void OnInitialized()
+	{
+		DataService.DataChanged += StateHasChanged;
+	}
+	public void Dispose()
+	{
+		DataService.DataChanged -= StateHasChanged;
+	}
+
+	[Parameter]
+	public Action<int> TelephoneSelected { get; set; }
+}

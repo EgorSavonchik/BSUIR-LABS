@@ -26,7 +26,7 @@ namespace WEB_153501_Savonchik.API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Firm>>> Getfirms()
         {
-            return Ok(await _firmService.GetCategoryListAsync());
+            return Ok(await _firmService.GetFirmListAsync());
         }
 
         /*// GET: api/Firms/5

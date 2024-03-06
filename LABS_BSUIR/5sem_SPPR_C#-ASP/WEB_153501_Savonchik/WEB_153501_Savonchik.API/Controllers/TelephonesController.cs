@@ -4,6 +4,7 @@ using System.Drawing.Printing;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -34,16 +35,18 @@ namespace WEB_153501_Savonchik.API.Controllers
         }
 
         // GET: api/Telephones
+        [AllowAnonymous]
         [HttpGet("")]
-        [Route("{category}")]
-        [Route("page{pageNo}")]
-        [Route("{category}/page{pageNo}")]
+        [HttpGet("{category}")]
+        [HttpGet("page{pageNo}")]
+        [HttpGet("{category}/page{pageNo}")]
         public async Task<ActionResult<ResponseData<List<Telephone>>>> GetTelephones(string? category, int pageNo = 1,int pageSize = 3)
         {
             return Ok(await _telephoneService.GetTelephoneListAsync(category, pageNo, pageSize));
         }
 
         // GET: api/Telephones/5
+        [AllowAnonymous]
         [HttpGet("{id:int}")]
         public async Task<ActionResult<Telephone>> GetTelephone(int id)
         {
@@ -59,13 +62,14 @@ namespace WEB_153501_Savonchik.API.Controllers
 
         // PUT: api/Telephones/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTelephone(int id, Telephone telephone)
         {
-            if (id != telephone.Id)
+            /*if (id != telephone.Id)
             {
                 return BadRequest();
-            }
+            }*/
             
             if (!TelephoneExists(id))
             {
@@ -79,6 +83,7 @@ namespace WEB_153501_Savonchik.API.Controllers
 
         // POST: api/Telephones
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult<Telephone>> PostTelephone(Telephone telephone)
         {
@@ -88,6 +93,7 @@ namespace WEB_153501_Savonchik.API.Controllers
         }
 
         // DELETE: api/Telephones/5
+        [Authorize]
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> DeleteTelephone(int id)
         {
@@ -107,6 +113,7 @@ namespace WEB_153501_Savonchik.API.Controllers
         }
 
         // POST: api/Telephones/5
+        [Authorize]
         [HttpPost("{id:int}")]
         public async Task<ActionResult<ResponseData<string>>> PostImage(int id, IFormFile formFile)
         {

@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    var request = ViewContext.HttpContext.Request;
+    var returnUrl = request.Path + request.QueryString.ToUriComponent();
+    @model (ListModel<Telephone> telephones, bool isAdminPage);
+}
+
+
+
+
+<section class="row mb-3">
+    <div class="col-sm-10 offset-sm-2 row">
+    @foreach (var item in Model.telephones.Items.ToList())
+    {
+        <div class="card mt-3 mx-3" style="width:250px">
+            <img src="@String.Format(@item.ImageSource + @item.Mime)" 
+                class="card-img-top" alt="..." style="height: 200px; object-fit: contain;"/> 
+            <div class="card-body">
+                <h5 class="card-title">@item.Name</h5>
+                <p class="card-text">@item.Description</p>
+                @if (Model.isAdminPage)
+                {
+                    <a class="btn btn-success" asp-page="./Edit" asp-route-id="@item.Id"><i class="fas fa-edit"></i>Edit</a>
+                    <a class="btn btn-info" asp-page="./Details" asp-route-id="@item.Id"><i class="fa-solid fa-info"></i>Details</a>
+                    <a class="btn btn-danger" asp-page="./Delete" asp-route-id="@item.Id"><i class="fa-solid fa-trash"></i>Delete</a>
+                }
+                else
+                {
+                    <a asp-controller="Cart" asp-action="Add" asp-route-id="@item.Id" asp-route-returnUrl=@returnUrl class="btn btn-primary">Добавить в корзину</a>
+                }
+            </div>
+        </div>
+    }
+    </div>
+</section>
+
+<pager current-page="@Model.telephones.CurrentPage" 
+    total-pages="@Model.telephones.TotalPages" 
+    category="@(ViewData["normalizedFirmName"] != null ? ViewData["normalizedFirmName"] : string.Empty)"></pager>
+
+
+   

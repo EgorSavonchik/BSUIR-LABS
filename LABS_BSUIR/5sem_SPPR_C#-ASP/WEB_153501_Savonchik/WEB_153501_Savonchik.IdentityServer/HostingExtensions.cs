@@ -12,13 +12,24 @@ namespace WEB_153501_Savonchik.IdentityServer
         public static WebApplication ConfigureServices(this WebApplicationBuilder builder)
         {
             builder.Services.AddRazorPages();
+            builder.Services.AddControllers();
 
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddDefaultTokenProviders();
+
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>(opt 
+                => {
+                        opt.SignIn.RequireConfirmedAccount = false;
+                        opt.Password.RequireNonAlphanumeric = false;
+                        opt.Password.RequireLowercase = false;
+                        opt.Password.RequireUppercase = false;
+                        opt.Password.RequireDigit = false;
+                        opt.SignIn.RequireConfirmedAccount = false;
+                    })
+                    .AddEntityFrameworkStores<ApplicationDbContext>()
+                    .AddDefaultTokenProviders();
+
 
             builder.Services
                 .AddIdentityServer(options =>
@@ -64,6 +75,7 @@ namespace WEB_153501_Savonchik.IdentityServer
             app.UseRouting();
             app.UseIdentityServer();
             app.UseAuthorization();
+            app.MapControllers();
 
             app.MapRazorPages()
                 .RequireAuthorization();

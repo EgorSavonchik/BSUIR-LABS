@@ -1,32 +1,48 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Options;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
 using WEB_153501_Savonchik.Controllers;
 using WEB_153501_Savonchik.Domain.Entities;
 using WEB_153501_Savonchik.Domain.Models;
 using WEB_153501_Savonchik.Services.TelephoneService;
+using WEB_153501_Savonchik.Util;
 
 namespace WEB_153501_Savonchik.Services.ApiService
 {
     public class ApiTelephoneService : ITelephoneService
     {
-        HttpClient _httpClient;
-        string _pageSize;
-        JsonSerializerOptions _serializerOptions;
-        ILogger _logger;
+        private readonly HttpClient _httpClient;
+        private readonly string _pageSize;
+        private readonly JsonSerializerOptions _serializerOptions;
+        private readonly ILogger _logger;
+        private readonly HttpContext _httpContext;
 
-        public ApiTelephoneService(HttpClient httpClient, IConfiguration configuration, ILogger<ApiTelephoneService> logger)
+
+		public ApiTelephoneService(HttpClient client,
+            IOptions<UriData> uriData,
+            ILogger<ApiTelephoneService> logger,
+            IHttpContextAccessor httpContextAccessor,
+            IConfiguration configuration)
         {
-            _httpClient = httpClient;
-            _pageSize = configuration.GetSection("ItemsPerPage").Value;
+            _httpClient = client;
+
+            var _uriData = uriData.Value;
+            _httpClient.BaseAddress = new Uri(_uriData.ApiUri);
+
             _serializerOptions = new JsonSerializerOptions()
             {
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase
             };
-            _logger = logger;
-        }
 
+            _logger = logger;
+            _httpContext = httpContextAccessor.HttpContext;
+
+            _pageSize = Convert.ToInt32(configuration.GetSection("ItemsPerPage").Value).ToString(); 
+		}
 
         public async Task<ResponseData<ListModel<Telephone>>> GetTelephoneListAsync(string? categoryNormalizedName, int pageNo = 1)
         {
@@ -47,7 +63,10 @@ namespace WEB_153501_Savonchik.Services.ApiService
             {
                 urlString.Append(QueryString.Create("pageSize", _pageSize));
             }
+
             // отправить запрос к API
+            //var token = await _httpContext.GetTokenAsync("access_token");
+            //_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", token);
             var response = await _httpClient.GetAsync(new Uri(urlString.ToString()));
 
             if (response.IsSuccessStatusCode)
@@ -78,19 +97,10 @@ namespace WEB_153501_Savonchik.Services.ApiService
 
         public async Task<ResponseData<Telephone>> CreateTelephoneAsync(Telephone telephone, IFormFile? formFile)
         {
-            /*var urlString = new StringBuilder($"{_httpClient.BaseAddress.AbsoluteUri}telephones");
-            StringContent stringContent = new StringContent(JsonSerializer.Serialize(telephone), Encoding.UTF8, "application/json");
-
-            var response = await _httpClient.PostAsync(new Uri(urlString.ToString()), stringContent);
-
-            if (formFile != null)
-            {
-                await this.SaveImageAsync((await response.Content.ReadFromJsonAsync<ResponseData<Telephone>>(_serializerOptions)).Data.Id, formFile);
-            }
-
-            return await response.Content.ReadFromJsonAsync<ResponseData<Telephone>>(_serializerOptions);*/
             var uri = new Uri(_httpClient.BaseAddress.AbsoluteUri + "telephones");
 
+            var token = await _httpContext.GetTokenAsync("access_token");
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", token);
             var response = await _httpClient.PostAsJsonAsync(uri, telephone, _serializerOptions);
             
             if (response.IsSuccessStatusCode)
@@ -118,6 +128,8 @@ namespace WEB_153501_Savonchik.Services.ApiService
         {
             var urlString = new StringBuilder($"{_httpClient.BaseAddress.AbsoluteUri}telephones/{id}");
 
+            //var token = await _httpContext.GetTokenAsync("access_token");
+            //_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", token);
             var response = await _httpClient.GetAsync(new Uri(urlString.ToString()));
 
             if (response.IsSuccessStatusCode)
@@ -153,6 +165,8 @@ namespace WEB_153501_Savonchik.Services.ApiService
 
             StringContent stringContent = new StringContent(JsonSerializer.Serialize(telephone), Encoding.UTF8, "application/json");
 
+            var token = await _httpContext.GetTokenAsync("access_token");
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", token);
             var response = await _httpClient.PutAsync(new Uri(urlString.ToString()), stringContent);
 
             if (formFile != null)
@@ -166,6 +180,8 @@ namespace WEB_153501_Savonchik.Services.ApiService
         {
             var urlString = new StringBuilder($"{_httpClient.BaseAddress.AbsoluteUri}telephones/{id}");
 
+            var token = await _httpContext.GetTokenAsync("access_token");
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", token);
             await _httpClient.DeleteAsync(new Uri(urlString.ToString()));
         }
 
@@ -183,6 +199,8 @@ namespace WEB_153501_Savonchik.Services.ApiService
             content.Add(streamContent, "formFile", image.FileName);
             request.Content = content;
 
+            var token = await _httpContext.GetTokenAsync("access_token");
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", token);
             await _httpClient.SendAsync(request);
         }
     }

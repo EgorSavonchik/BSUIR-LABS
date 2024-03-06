@@ -1,5 +1,8 @@
-﻿using Serilog;
+using Serilog;
 using WEB_153501_Savonchik.IdentityServer;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using WEB_153501_Savonchik.IdentityServer.Data;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()

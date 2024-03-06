@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WEB_153501_Savonchik.Domain
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WEB_153501_Savonchik.API", "WEB_153501_Savonchik.API\WEB_153501_Savonchik.API.csproj", "{EA89E04E-8AAD-4841-81DF-1F066E3996A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB_153501_Savonchik.IdentityServer", "WEB_153501_Savonchik.IdentityServer\WEB_153501_Savonchik.IdentityServer.csproj", "{00729D57-E0AC-4FE6-B53E-C88EAAD3B194}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WEB_153501_Savonchik.IdentityServer", "WEB_153501_Savonchik.IdentityServer\WEB_153501_Savonchik.IdentityServer.csproj", "{00729D57-E0AC-4FE6-B53E-C88EAAD3B194}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WEB_153501_Savonchik.Tests", "WEB_153501_Savonchik.Tests\WEB_153501_Savonchik.Tests.csproj", "{F03115FD-5450-4E63-B510-8662E2E64F02}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WEB_153501_Savonchik.BlazorWasm", "WEB_153501_Savonchik.BlazorWasm\WEB_153501_Savonchik.BlazorWasm.csproj", "{66A698B6-4B89-48B1-83D5-8FFB94F31AB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{00729D57-E0AC-4FE6-B53E-C88EAAD3B194}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00729D57-E0AC-4FE6-B53E-C88EAAD3B194}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00729D57-E0AC-4FE6-B53E-C88EAAD3B194}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F03115FD-5450-4E63-B510-8662E2E64F02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F03115FD-5450-4E63-B510-8662E2E64F02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F03115FD-5450-4E63-B510-8662E2E64F02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F03115FD-5450-4E63-B510-8662E2E64F02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66A698B6-4B89-48B1-83D5-8FFB94F31AB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66A698B6-4B89-48B1-83D5-8FFB94F31AB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66A698B6-4B89-48B1-83D5-8FFB94F31AB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66A698B6-4B89-48B1-83D5-8FFB94F31AB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

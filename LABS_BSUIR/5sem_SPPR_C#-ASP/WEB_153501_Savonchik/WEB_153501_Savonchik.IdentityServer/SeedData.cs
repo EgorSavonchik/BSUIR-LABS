@@ -20,6 +20,17 @@ namespace WEB_153501_Savonchik.IdentityServer
                 var userMgr = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
                 var roleMgr = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
+                List<string> roles = new()
+                {
+                    "admin",
+                    "user"
+                };
+
+                foreach (var role in roles)
+                {
+                    roleMgr.CreateAsync(new IdentityRole(role));
+                }
+
                 var alice = userMgr.FindByNameAsync("alice").Result;
                 if (alice == null)
                 {
@@ -92,9 +103,9 @@ namespace WEB_153501_Savonchik.IdentityServer
                     {
                         UserName = "admin",
                         Email = "admin@email.com",
-                        EmailConfirmed = true,
+                        EmailConfirmed = true
                     };
-                    var result = userMgr.CreateAsync(admin, "admin123").Result;
+                    var result = userMgr.CreateAsync(admin, "Admin123$").Result;
                     if (!result.Succeeded)
                     {
                         throw new Exception(result.Errors.First().Description);
@@ -110,6 +121,9 @@ namespace WEB_153501_Savonchik.IdentityServer
                     {
                         throw new Exception(result.Errors.First().Description);
                     }
+
+                    // добавление роли
+                    userMgr.AddToRoleAsync(admin, "admin");
 
                     Log.Debug("admin created");
                 }
@@ -127,7 +141,7 @@ namespace WEB_153501_Savonchik.IdentityServer
                         Email = "user@email.com",
                         EmailConfirmed = true,
                     };
-                    var result = userMgr.CreateAsync(user, "user123").Result;
+                    var result = userMgr.CreateAsync(user, "User123$").Result;
                     if (!result.Succeeded)
                     {
                         throw new Exception(result.Errors.First().Description);
@@ -143,6 +157,9 @@ namespace WEB_153501_Savonchik.IdentityServer
                     {
                         throw new Exception(result.Errors.First().Description);
                     }
+
+                    // добавление роли
+                    userMgr.AddToRoleAsync(user, "user");
 
                     Log.Debug("user created");
                 }
